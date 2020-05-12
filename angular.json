@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "glasanje"
+    }
+  },
+  "defaultProject": "glasanje",
+  "cli": {
+    "analytics": "7f578510-f81a-4912-bf0b-1990cfb65185"
+  }
 }

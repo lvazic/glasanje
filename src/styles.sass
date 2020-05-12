@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/theming'
+
+@include mat-core()
+
+$glasanje-app-primary: mat-palette($mat-indigo)
+$glasanje-app-accent:  mat-palette($mat-pink, A200, A100, A400)
+
+$glasanje-app-warn:    mat-palette($mat-red)
+
+$glasanje-app-theme: mat-light-theme($glasanje-app-primary, $glasanje-app-accent, $glasanje-app-warn)
+
+@include angular-material-theme($glasanje-app-theme)
+
+body
+	font-family: 'Roboto', sans-serif
