@@ -1,0 +1,96 @@
+<div class="form-container">
+  <form [formGroup]="form" class="register-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Ime</mat-label>
+      <input formControlName="ime" matInput placeholder="Unesite Vase ime i prezime">
+      <mat-hint>Unesite vase puno ime kao sto je licnoj karti ili pasosu. Na primer: Petar Petrovic</mat-hint>
+      <mat-error *ngIf="form.get('ime').hasError('required')">Molimo Vas, unesite ime</mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>Datum rodjenja</mat-label>
+      <input [matDatepicker]="picker" formControlName="datumRodjenja" matInput placeholder="Unesite Vas datum rodjenja">
+      <mat-hint>Unesite Vas datum rodjenja. Prvo izaberite godinu</mat-hint>
+      <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+      <mat-error *ngIf="form.get('datumRodjenja').hasError('required')">Molimo Vas, unesite datum rodjenja
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Izborno mesto</mat-label>
+      <mat-select formControlName="izbornoMesto" placeholder="Izaberite Vase izborno mesto">
+        <mat-option value="Singapur">Singapur</mat-option>
+        <mat-option value="San Francisko">San Francisko</mat-option>
+      </mat-select>
+      <mat-hint>Izaberite Vase izborno mesto</mat-hint>
+      <mat-error *ngIf="form.get('izbornoMesto').hasError('required')">
+        Molimo Vas, izaberite izborno mesto
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Pol</mat-label>
+      <mat-select formControlName="pol" placeholder="Izaberite Vas pol">
+        <mat-option value="Muski">Muski</mat-option>
+        <mat-option value="Zenski">Zenski</mat-option>
+      </mat-select>
+      <mat-hint>Izaberite Vase izborno mesto</mat-hint>
+      <mat-error *ngIf="form.get('pol').hasError('required')">Molimo Vas, izaberite pol</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Ime jednog od roditelja</mat-label>
+      <input formControlName="imeRoditelja" matInput placeholder="Unesite ime jednog od roditelja">
+      <mat-hint>Unesite ime jednog od roditelja. Na primer: Marko</mat-hint>
+      <mat-error *ngIf="form.get('imeRoditelja').hasError('required')">
+        Molimo Vas, unesite ime jednog od roditelja
+      </mat-error>
+    </mat-form-field>
+
+
+    <mat-form-field appearance="outline">
+      <mat-label>JMBG</mat-label>
+      <input formControlName="jmbg" matInput placeholder="Unesite Vas JMBG">
+      <mat-hint>Jedinstveni maticni broj gradjana. Sadrzi 13 cifara</mat-hint>
+      <mat-error *ngIf="form.get('jmbg').hasError('required')">Molimo Vas, unesite JMBG</mat-error>
+      <mat-error *ngIf="form.get('jmbg').hasError('pattern')">
+        JMBG moze da se sastoji samo od cifara
+      </mat-error>
+      <mat-error *ngIf="form.get('jmbg').hasError('minlength')">
+        JMBG sadrzi manje od 13 cifara. Proverite vrednost
+      </mat-error>
+      <mat-error *ngIf="form.get('jmbg').hasError('maxlength')">
+        JMBG sadrzi vise od 13 cifara. Proverite vrednost
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+      <mat-label>Broj pasosa</mat-label>
+      <input formControlName="brojPasosa" matInput placeholder="Unesite broj Vaseg pasosa">
+      <mat-hint>Prva strana pasosa, gornji desni ugao</mat-hint>
+      <mat-error *ngIf="form.get('brojPasosa').hasError('required')">
+        Molimo Vas, unesite broj pasosa
+      </mat-error>
+      <mat-error *ngIf="form.get('brojPasosa').hasError('pattern')">
+        Broj pasosa moze da se sastoji samo od cifara
+      </mat-error>
+    </mat-form-field>
+
+    <div class="signature-pad">
+      <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()" [options]="signaturePadOptions"
+                     id="signatureCanvas">
+      </signature-pad>
+      <button (click)="eraseSignature()" [disabled]="!signatureSet" mat-button>Obrisi</button>
+    </div>
+
+    <button (click)="generateApplication()" [disabled]="form.invalid || !signatureSet" class="start-button"
+            color="primary"
+            mat-flat-button>
+      Napravi prijavu
+    </button>
+
+
+  </form>
+</div>
