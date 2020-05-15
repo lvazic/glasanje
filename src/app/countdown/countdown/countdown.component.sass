@@ -4,6 +4,9 @@
 	flex-direction: column
 	justify-content: center
 	
+	.time-left-label
+		margin-top: 16px
+	
 	.units
 		align-items: center
 		display: flex
@@ -18,9 +21,14 @@
 			margin: 10px
 		
 			.value
-				font-size: 32px
+				font-size: 24px
+				@media (min-width: 330px)
+					font-size: 32px
 			.label
 				font-size: 12px
 				
 	.date
-		font-size: 32px
+		font-size: 24px
+		@media (min-width: 330px)
+			font-size: 32px
+		margin: 0

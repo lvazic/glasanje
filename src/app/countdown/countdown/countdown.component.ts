@@ -18,7 +18,7 @@ interface CountdownInfo {
 })
 export class CountdownComponent {
 
-  readonly electionDate = new Date('June 11, 2020 12:00:00');
+  readonly electionDate = new Date('June 21, 2020 12:00:00');
   readonly countdown$ = interval(200).pipe(map(() => this.buildCountdownInfo()));
 
   private buildCountdownInfo(): CountdownInfo {

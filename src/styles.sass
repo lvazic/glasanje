@@ -1,15 +1,27 @@
 @import '~@angular/material/theming'
 
-@include mat-core()
+$custom-typography: mat-typography-config($font-family: '"Source Sans Pro", sans-serif')
+
+@include mat-core($custom-typography)
 
 $glasanje-app-primary: mat-palette($mat-indigo)
 $glasanje-app-accent:  mat-palette($mat-pink, A200, A100, A400)
-
 $glasanje-app-warn:    mat-palette($mat-red)
-
 $glasanje-app-theme: mat-light-theme($glasanje-app-primary, $glasanje-app-accent, $glasanje-app-warn)
 
 @include angular-material-theme($glasanje-app-theme)
 
-body
-	font-family: 'Roboto', sans-serif
+$blue: #183C77
+
+
+html, app-root, body
+	background-color: $blue
+	display: flex
+	flex-direction: column
+	font-family: 'Source Sans Pro', sans-serif
+	height: 100%
+	margin: 0
+	width: 100%
+
+.mat-vertical-content
+	padding: 0  8px 8px 8px !important

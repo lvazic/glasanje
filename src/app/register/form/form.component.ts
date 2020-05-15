@@ -1,5 +1,6 @@
 import {ChangeDetectionStrategy, Component, ViewChild} from '@angular/core';
 import {FormBuilder, Validators} from '@angular/forms';
+import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 import {PDFDocument, rgb} from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit'
@@ -13,37 +14,55 @@ import {SignaturePad} from 'angular2-signaturepad';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  providers: [
+	  {
+		  provide: STEPPER_GLOBAL_OPTIONS,
+		  useValue: {displayDefaultIndicatorType: false},
+	  },
+  ],
 })
 export class FormComponent {
 
+  readonly dtf = new Intl.DateTimeFormat('en', {year: 'numeric', month: 'numeric', day: '2-digit'});
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
 
-  readonly form = this.fb.group({
+  readonly personalInfoForm = this.fb.group({
     'ime': this.fb.control('', [Validators.required]),
     'datumRodjenja': this.fb.control('', [Validators.required]),
+    'mestoRodjenja': this.fb.control('', [Validators.required]),
     'pol': this.fb.control('', [Validators.required]),
     'imeRoditelja': this.fb.control('', [Validators.required]),
-    'izbornoMesto': this.fb.control('', [Validators.required]),
     'jmbg': this.fb.control('', [
       Validators.required,
       Validators.pattern("^[0-9]*$"),
       Validators.minLength(13),
       Validators.maxLength(13),
     ]),
+    'adresaPrebivalista': this.fb.control('', [Validators.required]),
+    'adresaPrebivalistaInternoRaseljeni': this.fb.control(''),
+    'email': this.fb.control('', [Validators.required, Validators.email]),
+    'telefon': this.fb.control('', [Validators.required]),
+  });
+
+  readonly foreignVotingInfoForm = this.fb.group({
     'brojPasosa': this.fb.control('', [
       Validators.required,
       Validators.pattern("^[0-9]*$"),
     ]),
-    'potpis': this.fb.control(''),
+    'trenutnaLokacija': this.fb.control('', [Validators.required]),
+    'izbornoMesto': this.fb.control('', [Validators.required]),
+    'adresaPrebivalista': this.fb.control('', [Validators.required]),
+    'zeljenoIzbornoMesto': this.fb.control(''),
   });
 
   readonly signaturePadOptions = {
-    'canvasHeight': 300,
-    'canvasWidth': 500,
+    'canvasHeight': 200,
+    'canvasWidth': 400,
   };
 
   signatureSet = false;
   signature = '';
+  formDownloaded = false;
 
   constructor(private readonly fb: FormBuilder) {}
 
@@ -73,7 +92,7 @@ export class FormComponent {
     const pages = pdfDoc.getPages();
     const firstPage = pages[0];
 
-    const ime = this.form.get('ime').value;
+    const ime = this.personalInfoForm.get('ime').value;
     firstPage.drawText(ime, {
       x: 300,
       y: 615,
@@ -89,11 +108,8 @@ export class FormComponent {
       color: rgb(0, 0, 0),
     });
 
-    const datumRodjenja = this.form.get('datumRodjenja').value;
-    const dtf = new Intl.DateTimeFormat('en', {year: 'numeric', month: 'numeric', day: '2-digit'});
-    const [{value: mo}, , {value: da}, , {value: ye}] = dtf.formatToParts(datumRodjenja);
-    const datumRodjenjaFormat = `${da}.${mo}.${ye}.`;
-    firstPage.drawText(datumRodjenjaFormat, {
+    const datumRodjenja = this.personalInfoForm.get('datumRodjenja').value;
+    firstPage.drawText(this.getDateString(datumRodjenja), {
       x: 300,
       y: 590,
       font: robotoFont,
@@ -101,7 +117,7 @@ export class FormComponent {
       color: rgb(0, 0, 0),
     });
 
-    const pol = this.form.get('pol').value;
+    const pol = this.personalInfoForm.get('pol').value;
     firstPage.drawText(pol, {
       x: 300,
       y: 565,
@@ -110,7 +126,7 @@ export class FormComponent {
       color: rgb(0, 0, 0),
     });
 
-    const imeRoditelja = this.form.get('imeRoditelja').value;
+    const imeRoditelja = this.personalInfoForm.get('imeRoditelja').value;
     firstPage.drawText(imeRoditelja, {
       x: 300,
       y: 544,
@@ -119,7 +135,7 @@ export class FormComponent {
       color: rgb(0, 0, 0),
     });
 
-    const jmbg = this.form.get('jmbg').value;
+    const jmbg = this.personalInfoForm.get('jmbg').value;
     const cifre = jmbg.split('');
     let initialX = 303;
     for (const cifra of cifre) {
@@ -133,7 +149,7 @@ export class FormComponent {
       initialX += 17.3;
     }
 
-    const brojPasosa = this.form.get('brojPasosa').value;
+    const brojPasosa = this.foreignVotingInfoForm.get('brojPasosa').value;
     firstPage.drawText(brojPasosa, {
       x: 300,
       y: 495,
@@ -142,11 +158,58 @@ export class FormComponent {
       color: rgb(0, 0, 0),
     });
 
+    const adresaPrebivalista = this.personalInfoForm.get('adresaPrebivalista').value;
+    firstPage.drawText(adresaPrebivalista, {
+      x: 300,
+      y: 475,
+      font: robotoFont,
+      size: 10,
+      color: rgb(0, 0, 0),
+    });
 
-    const izbornoMesto = this.form.get('izbornoMesto').value;
-    firstPage.drawText(izbornoMesto, {
-      x: 500,
+    const adresaPrebivalistaInternoRaseljeni = this.personalInfoForm.get('adresaPrebivalistaInternoRaseljeni').value;
+    if (adresaPrebivalistaInternoRaseljeni) {
+      firstPage.drawText(adresaPrebivalistaInternoRaseljeni, {
+        x: 300,
+        y: 455,
+        font: robotoFont,
+        size: 10,
+        color: rgb(0, 0, 0),
+      });
+    }
+
+    const stranaAdresaPrebivalista = this.foreignVotingInfoForm.get('adresaPrebivalista').value;
+      firstPage.drawText(stranaAdresaPrebivalista, {
+        x: 300,
+        y: 405,
+        font: robotoFont,
+        size: 10,
+        color: rgb(0, 0, 0),
+      });
+
+    const izbornoMesto = this.foreignVotingInfoForm.get('izbornoMesto').value;
+    const zeljenoIzbornoMesto = this.foreignVotingInfoForm.get('zeljenoIzbornoMesto').value;
+    firstPage.drawText(zeljenoIzbornoMesto ?? izbornoMesto, {
+      x: 300,
       y: 350,
+      font: robotoFont,
+      size: 10,
+      color: rgb(0, 0, 0),
+    });
+
+    const trenutnaLokacija = this.foreignVotingInfoForm.get('trenutnaLokacija').value;
+    firstPage.drawText(trenutnaLokacija, {
+      x: 140,
+      y: 260,
+      font: robotoFont,
+      size: 10,
+      color: rgb(0, 0, 0),
+    });
+
+    const datum = this.getDateString(new Date());
+    firstPage.drawText(datum, {
+      x: 220,
+      y: 260,
       font: robotoFont,
       size: 10,
       color: rgb(0, 0, 0),
@@ -162,7 +225,28 @@ export class FormComponent {
       height: signatureDims.height,
     });
 
+    const telefon = this.personalInfoForm.get('telefon').value;
+    const email = this.personalInfoForm.get('email').value;
+
+    const kontaktInfo = `${telefon} / ${email}`;
+    firstPage.drawText(kontaktInfo, {
+      x: 350,
+      y: 175,
+      font: robotoFont,
+      size: 10,
+      color: rgb(0, 0, 0),
+    });
+
     const pdfBytes = await pdfDoc.save();
     download(pdfBytes, "Zahtev za glasanje 2020.pdf", "application/pdf");
+  }
+
+  sendEmail() {
+    window.open("https://www.google.com", "_blank");
+  }
+
+  private getDateString(date: Date): string {
+    const [{value: mo}, , {value: da}, , {value: ye}] = this.dtf.formatToParts(date);
+    return `${da}.${mo}.${ye}.`;
   }
 }

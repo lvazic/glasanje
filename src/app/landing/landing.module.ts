@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {LandingComponent} from './landing/landing.component';
+import {MatCardModule} from "@angular/material/card";
 import {MatButtonModule} from '@angular/material/button';
 import {RouterModule} from '@angular/router';
 import {CountdownModule} from '../countdown/countdown.module';
@@ -13,6 +14,7 @@ import {CountdownModule} from '../countdown/countdown.module';
     CommonModule,
     CountdownModule,
     MatButtonModule,
+    MatCardModule,
     RouterModule,
   ],
   exports: [

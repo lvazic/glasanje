@@ -1,22 +1,22 @@
 <div *ngIf="(countdown$ | async) as countdown" class="countdown-container">
-  <p>Do izbora je ostalo</p>
+  <span class="time-left-label">До избора је остало</span>
   <div class="units">
     <div class="unit">
       <span class="value">{{countdown.days}}</span>
-      <span class="label">DANA</span>
+      <span class="label">ДАНА</span>
     </div>
     <div class="unit">
       <span class="value">{{countdown.hours}}</span>
-      <span class="label">SATI</span>
+      <span class="label">САТИ</span>
     </div>
     <div class="unit">
       <span class="value">{{countdown.minutes}}</span>
-      <span class="label">MINUTA</span>
+      <span class="label">МИНУТА</span>
     </div>
     <div class="unit">
       <span class="value">{{countdown.seconds}}</span>
-      <span class="label">SEKUNDI</span>
+      <span class="label">СЕКУНДИ</span>
     </div>
   </div>
-  <p class="date">11. jun 2020.</p>
+  <p class="date">21. јун 2020.</p>
 </div>

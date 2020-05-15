@@ -1,96 +1,230 @@
 <div class="form-container">
-  <form [formGroup]="form" class="register-form">
-    <mat-form-field appearance="outline">
-      <mat-label>Ime</mat-label>
-      <input formControlName="ime" matInput placeholder="Unesite Vase ime i prezime">
-      <mat-hint>Unesite vase puno ime kao sto je licnoj karti ili pasosu. Na primer: Petar Petrovic</mat-hint>
-      <mat-error *ngIf="form.get('ime').hasError('required')">Molimo Vas, unesite ime</mat-error>
-    </mat-form-field>
 
+  <mat-vertical-stepper linear>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Datum rodjenja</mat-label>
-      <input [matDatepicker]="picker" formControlName="datumRodjenja" matInput placeholder="Unesite Vas datum rodjenja">
-      <mat-hint>Unesite Vas datum rodjenja. Prvo izaberite godinu</mat-hint>
-      <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
-      <mat-datepicker #picker></mat-datepicker>
-      <mat-error *ngIf="form.get('datumRodjenja').hasError('required')">Molimo Vas, unesite datum rodjenja
-      </mat-error>
-    </mat-form-field>
+    <mat-step label="Провера бирачког списка" state="check">
+      <p>Проверите да ли сте уписани у <a href="https://upit.birackispisak.gov.rs/" target="_blank">бирачки списак</a> и
+        вратите се на ову страницу.</p>
+      <p>Ако нисте уписани контактирајте Министарство иностраних послова.</p>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Izborno mesto</mat-label>
-      <mat-select formControlName="izbornoMesto" placeholder="Izaberite Vase izborno mesto">
-        <mat-option value="Singapur">Singapur</mat-option>
-        <mat-option value="San Francisko">San Francisko</mat-option>
-      </mat-select>
-      <mat-hint>Izaberite Vase izborno mesto</mat-hint>
-      <mat-error *ngIf="form.get('izbornoMesto').hasError('required')">
-        Molimo Vas, izaberite izborno mesto
-      </mat-error>
-    </mat-form-field>
+      <div class="action-button">
+        <button color="primary" mat-flat-button matStepperNext>Настави</button>
+      </div>
+    </mat-step>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Pol</mat-label>
-      <mat-select formControlName="pol" placeholder="Izaberite Vas pol">
-        <mat-option value="Muski">Muski</mat-option>
-        <mat-option value="Zenski">Zenski</mat-option>
-      </mat-select>
-      <mat-hint>Izaberite Vase izborno mesto</mat-hint>
-      <mat-error *ngIf="form.get('pol').hasError('required')">Molimo Vas, izaberite pol</mat-error>
-    </mat-form-field>
+    <mat-step [stepControl]="personalInfoForm" label="Личне информације" state="personal">
+      <form [formGroup]="personalInfoForm" class="register-form">
 
-    <mat-form-field appearance="outline">
-      <mat-label>Ime jednog od roditelja</mat-label>
-      <input formControlName="imeRoditelja" matInput placeholder="Unesite ime jednog od roditelja">
-      <mat-hint>Unesite ime jednog od roditelja. Na primer: Marko</mat-hint>
-      <mat-error *ngIf="form.get('imeRoditelja').hasError('required')">
-        Molimo Vas, unesite ime jednog od roditelja
-      </mat-error>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Име</mat-label>
+          <input formControlName="ime" matInput placeholder="Унесите Ваше име и презиме">
+          <mat-hint>Унесите Ваше пуно име као што је у пасошу. На пример: Петар Петровић</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('ime').hasError('required')">
+            Молимо Вас, унесите име
+          </mat-error>
+        </mat-form-field>
 
+        <mat-form-field appearance="outline">
+          <mat-label>Датум рођења</mat-label>
+          <input [matDatepicker]="picker" formControlName="datumRodjenja" matInput
+                 placeholder="Унесите Ваш датум рођења">
+          <mat-hint>Унесите Ваш датум рођења. Прво изаберите годину</mat-hint>
+          <mat-datepicker-toggle [for]="picker" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="personalInfoForm.get('datumRodjenja').hasError('required')">
+            Молимо Вас, унесите датум рођења
+          </mat-error>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>JMBG</mat-label>
-      <input formControlName="jmbg" matInput placeholder="Unesite Vas JMBG">
-      <mat-hint>Jedinstveni maticni broj gradjana. Sadrzi 13 cifara</mat-hint>
-      <mat-error *ngIf="form.get('jmbg').hasError('required')">Molimo Vas, unesite JMBG</mat-error>
-      <mat-error *ngIf="form.get('jmbg').hasError('pattern')">
-        JMBG moze da se sastoji samo od cifara
-      </mat-error>
-      <mat-error *ngIf="form.get('jmbg').hasError('minlength')">
-        JMBG sadrzi manje od 13 cifara. Proverite vrednost
-      </mat-error>
-      <mat-error *ngIf="form.get('jmbg').hasError('maxlength')">
-        JMBG sadrzi vise od 13 cifara. Proverite vrednost
-      </mat-error>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Место рођења</mat-label>
+          <input formControlName="mestoRodjenja" matInput placeholder="Унесите Ваше место рођења">
+          <mat-hint>Унесите Ваше место рођења као што је у пасошу. На пример: Чачак</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('mestoRodjenja').hasError('required')">
+            Молимо Вас, унесите место рођења
+          </mat-error>
+        </mat-form-field>
 
-    <mat-form-field appearance="outline">
-      <mat-label>Broj pasosa</mat-label>
-      <input formControlName="brojPasosa" matInput placeholder="Unesite broj Vaseg pasosa">
-      <mat-hint>Prva strana pasosa, gornji desni ugao</mat-hint>
-      <mat-error *ngIf="form.get('brojPasosa').hasError('required')">
-        Molimo Vas, unesite broj pasosa
-      </mat-error>
-      <mat-error *ngIf="form.get('brojPasosa').hasError('pattern')">
-        Broj pasosa moze da se sastoji samo od cifara
-      </mat-error>
-    </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Пол</mat-label>
+          <mat-select formControlName="pol" placeholder="Изаберите Ваш пол">
+            <mat-option value="Мушки">Мушки</mat-option>
+            <mat-option value="Женски">Женски</mat-option>
+          </mat-select>
+          <mat-hint>Изаберите Ваш пол</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('pol').hasError('required')">
+            Молимо Вас, изаберите пол
+          </mat-error>
+        </mat-form-field>
 
-    <div class="signature-pad">
-      <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()" [options]="signaturePadOptions"
-                     id="signatureCanvas">
-      </signature-pad>
-      <button (click)="eraseSignature()" [disabled]="!signatureSet" mat-button>Obrisi</button>
-    </div>
+        <mat-form-field appearance="outline">
+          <mat-label>Име једног од родитеља</mat-label>
+          <input formControlName="imeRoditelja" matInput placeholder="Унесите име једног од родитеља">
+          <mat-hint>Унесите име једног од родитеља. На пример: Милица</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('imeRoditelja').hasError('required')">
+            Молимо Вас, унесите име једног од родитеља
+          </mat-error>
+        </mat-form-field>
 
-    <button (click)="generateApplication()" [disabled]="form.invalid || !signatureSet" class="start-button"
-            color="primary"
-            mat-flat-button>
-      Napravi prijavu
-    </button>
+        <mat-form-field appearance="outline">
+          <mat-label>ЈМБГ</mat-label>
+          <input formControlName="jmbg" matInput placeholder="Унесите Ваш ЈМБГ">
+          <mat-hint>Јединствени матични број грађана. Садржи 13 цифара</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('jmbg').hasError('required')">
+            Молимо Вас, унесите ЈМБГ
+          </mat-error>
+          <mat-error *ngIf="personalInfoForm.get('jmbg').hasError('pattern')">
+            ЈМБГ може да се састоји само од цифара
+          </mat-error>
+          <mat-error *ngIf="personalInfoForm.get('jmbg').hasError('minlength')">
+            ЈМБГ садржи мање од 13 цифара. Проверите вредност
+          </mat-error>
+          <mat-error *ngIf="personalInfoForm.get('jmbg').hasError('maxlength')">
+            ЈМБГ садржи више од 13 цифара. Проверите вредност
+          </mat-error>
+        </mat-form-field>
 
+        <mat-form-field appearance="outline">
+          <mat-label>Адреса пребивалишта</mat-label>
+          <input formControlName="adresaPrebivalista" matInput placeholder="Адреса пребивалишта у Србији">
+          <mat-hint>Унесите адресу пребивалишта у Србији. На пример: Косовска 1, 11000 Београд</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('adresaPrebivalista').hasError('required')">
+            Молимо Вас, унесите адресу пребивалишта
+          </mat-error>
+        </mat-form-field>
 
-  </form>
+        <mat-form-field appearance="outline">
+          <mat-label>Адреса пребивалишта за интерно расељена лица</mat-label>
+          <input formControlName="adresaPrebivalistaInternoRaseljeni" matInput
+                 placeholder="Опционо: Адреса пребивалишта за интерно расељена лица">
+          <mat-hint>Унесите ако сте интерно расељено лице. У супротном прескочите.</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Емаил адреса</mat-label>
+          <input formControlName="email" matInput placeholder="Емаил адреса">
+          <mat-hint>Емаил адреса путем које Вас амбасада може контактирати.</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('email').hasError('required')">
+            Молимо Вас, унесите емаил адресу
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Број телефона</mat-label>
+          <input formControlName="telefon" matInput placeholder="Број телефона">
+          <mat-hint>Број телефона путем којег Вас амбасада може контактирати.</mat-hint>
+          <mat-error *ngIf="personalInfoForm.get('telefon').hasError('required')">
+            Молимо Вас, унесите број телефона
+          </mat-error>
+        </mat-form-field>
+
+      </form>
+
+      <div class="action-button">
+        <button mat-button matStepperPrevious>Назад</button>
+        <button color="primary" mat-flat-button matStepperNext>Настави</button>
+      </div>
+
+    </mat-step>
+
+    <mat-step [stepControl]="foreignVotingInfoForm" label="Пребивалиште и гласачко место" state="foreign">
+      <form [formGroup]="foreignVotingInfoForm" class="register-form">
+
+        <mat-form-field appearance="outline">
+          <mat-label>Број пасоша</mat-label>
+          <input formControlName="brojPasosa" matInput placeholder="Унесите број Вашег пасоша">
+          <mat-hint>Прва страна пасоша, горњи десни угао</mat-hint>
+          <mat-error *ngIf="foreignVotingInfoForm.get('brojPasosa').hasError('required')">
+            Молимо Вас, унесите број пасоша
+          </mat-error>
+          <mat-error *ngIf="foreignVotingInfoForm.get('brojPasosa').hasError('pattern')">
+            Број пасоша може да се састоји само од цифара
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Тренутна локација</mat-label>
+          <input formControlName="trenutnaLokacija" matInput placeholder="Тренутна локација">
+          <mat-hint>Место где се тренутно налазите. На пример: Сан Франциско</mat-hint>
+          <mat-error *ngIf="foreignVotingInfoForm.get('trenutnaLokacija').hasError('required')">
+            Молимо Вас, унесите тренутну локацију
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Изборно место</mat-label>
+          <mat-select formControlName="izbornoMesto" placeholder="Изаберите Ваше изборно место">
+            <mat-option value="Сингапур">Сингапур</mat-option>
+            <mat-option value="Сан Франциско">Сан Франциско</mat-option>
+          </mat-select>
+          <mat-hint>Изаберите Ваше изборно место</mat-hint>
+          <mat-error *ngIf="foreignVotingInfoForm.get('izbornoMesto').hasError('required')">
+            Молимо Вас, изаберите изборно место
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Адреса пребивалишта</mat-label>
+          <input formControlName="adresaPrebivalista" matInput placeholder="Адреса пребивалишта у иностранству">
+          <mat-hint>Унесите адресу пребивалишта у иностранству. На пример: 15 Happy St, 94040 CA, USA</mat-hint>
+          <mat-error *ngIf="foreignVotingInfoForm.get('adresaPrebivalista').hasError('required')">
+            Молимо Вас, унесите адресу пребивалишта
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Жељено место гласања</mat-label>
+          <input formControlName="zeljenoIzbornoMesto" matInput placeholder="Унесите где бисте желели да гласате">
+          <mat-hint>
+            Унесите где бисте желели да гласате. Држава је у обавези да размотри локације са преко 100 пријава
+          </mat-hint>
+        </mat-form-field>
+
+      </form>
+
+      <div class="action-button">
+        <button mat-button matStepperPrevious>Назад</button>
+        <button color="primary" mat-flat-button matStepperNext>Настави</button>
+      </div>
+
+    </mat-step>
+
+    <mat-step label="Провера информација и потпис" state="review">
+      <div class="signature-pad">
+        <span>Потпишите се у уоквиреном подручју</span>
+        <signature-pad (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()" [options]="signaturePadOptions"
+                       id="signatureCanvas">
+        </signature-pad>
+        <button (click)="eraseSignature()" [disabled]="!signatureSet" mat-button>Обриши</button>
+      </div>
+
+      <div class="complete-button">
+        <button (click)="generateApplication(); formDownloaded=true"
+                [disabled]="!signatureSet && personalInfoForm.invalid && foreignVotingInfoForm.invalid" color="primary"
+                mat-flat-button>
+          <mat-icon>get_app</mat-icon>
+          Преузми формулар
+        </button>
+        <button (click)="sendEmail()" [disabled]="!formDownloaded" color="primary" mat-flat-button>
+          Пошаљи пријаву амбасади
+        </button>
+      </div>
+
+    </mat-step>
+
+    <ng-template matStepperIcon="check">
+      <mat-icon>assignment_turned_in</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="personal">
+      <mat-icon>perm_identity</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="foreign">
+      <mat-icon>public</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="review">
+      <mat-icon>thumb_up</mat-icon>
+    </ng-template>
+
+  </mat-vertical-stepper>
+
 </div>
