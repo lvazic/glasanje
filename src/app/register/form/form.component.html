@@ -155,7 +155,7 @@
           <mat-label>Изборно место</mat-label>
           <input [matAutocomplete]="auto" formControlName="izbornoMesto" matInput
                  placeholder="Изаберите Ваше изборно место">
-          <mat-autocomplete #auto="matAutocomplete">
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="getLocationLabel">
             <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
               {{option.labelCyr}}
             </mat-option>

@@ -71,6 +71,10 @@ export class FormComponent {
   constructor(private readonly fb: FormBuilder) {
   }
 
+  getLocationLabel(location: PollingStation) {
+    return location.labelCyr;
+  }
+
   drawComplete() {
     this.signature = this.signaturePad.toDataURL();
   }
@@ -247,7 +251,11 @@ export class FormComponent {
   }
 
   sendEmail() {
-    window.open("https://www.google.com", "_blank");
+    const izbornoMesto: PollingStation = this.foreignVotingInfoForm.get('izbornoMesto')!.value;
+    const to = izbornoMesto.email;
+    const subject = 'Registracija za glasanje iz inostranstva';
+    const body = 'Poštovani, \nPrilažem moje podatke za registraciju za glasanje iz inostranstva. \nSa poštovanjem';
+    window.open(`mailto:${to}?subject=${subject}&body=${body}`, "_blank");
   }
 
   private getDateString(date: Date): string {
