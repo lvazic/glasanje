@@ -1,4 +1,4 @@
-/** Described a polling station. */
+/** Describes a polling station. */
 export interface PollingStation {
   label: string;
   labelCyr: string;
@@ -6,6 +6,32 @@ export interface PollingStation {
   embassyCyr: string;
   email: string;
 }
+
+/** Describes a country with polling stations. */
+export interface VotingCountry {
+  /** ISO alpha-2 country code. */
+  countryCode: string;
+  label: string;
+  labelCyr: string;
+}
+
+export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map([
+  [
+    {
+      countryCode: 'AL',
+      label: 'Albanija',
+      labelCyr: 'Албанија',
+    }, [
+    {
+      label: 'Albanija',
+      labelCyr: 'Албанија',
+      embassy: 'Ambasada Srbije u Albaniji',
+      embassyCyr: 'Амбасада Србије у Албанији',
+      email: 'ambatira@icc-al.org'
+    },
+  ],
+  ],
+]);
 
 export const POLLING_STATIONS: PollingStation[] = [
   {
