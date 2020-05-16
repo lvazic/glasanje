@@ -153,10 +153,13 @@
 
         <mat-form-field appearance="outline">
           <mat-label>Изборно место</mat-label>
-          <mat-select formControlName="izbornoMesto" placeholder="Изаберите Ваше изборно место">
-            <mat-option value="Сингапур">Сингапур</mat-option>
-            <mat-option value="Сан Франциско">Сан Франциско</mat-option>
-          </mat-select>
+          <input [matAutocomplete]="auto" formControlName="izbornoMesto" matInput
+                 placeholder="Изаберите Ваше изборно место">
+          <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+              {{option.labelCyr}}
+            </mat-option>
+          </mat-autocomplete>
           <mat-hint>Изаберите Ваше изборно место</mat-hint>
           <mat-error *ngIf="foreignVotingInfoForm.get('izbornoMesto').hasError('required')">
             Молимо Вас, изаберите изборно место

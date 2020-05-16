@@ -7,7 +7,8 @@ import fontkit from '@pdf-lib/fontkit'
 
 import * as download from 'downloadjs';
 import {SignaturePad} from 'angular2-signaturepad';
-
+import {POLLING_STATIONS, PollingStation} from "./constants";
+import {map, startWith} from 'rxjs/operators';
 
 @Component({
   selector: 'glasanje-form',
@@ -15,14 +16,15 @@ import {SignaturePad} from 'angular2-signaturepad';
   styleUrls: ['./form.component.sass'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
-	  {
-		  provide: STEPPER_GLOBAL_OPTIONS,
-		  useValue: {displayDefaultIndicatorType: false},
-	  },
+    {
+      provide: STEPPER_GLOBAL_OPTIONS,
+      useValue: {displayDefaultIndicatorType: false},
+    },
   ],
 })
 export class FormComponent {
 
+  readonly locations = POLLING_STATIONS;
   readonly dtf = new Intl.DateTimeFormat('en', {year: 'numeric', month: 'numeric', day: '2-digit'});
   @ViewChild(SignaturePad) signaturePad: SignaturePad;
 
@@ -55,6 +57,8 @@ export class FormComponent {
     'zeljenoIzbornoMesto': this.fb.control(''),
   });
 
+  readonly filteredOptions$ = this.foreignVotingInfoForm.get('izbornoMesto')!.valueChanges.pipe(startWith(''), map((val) => this.filter(val)));
+
   readonly signaturePadOptions = {
     'canvasHeight': 200,
     'canvasWidth': 400,
@@ -64,7 +68,8 @@ export class FormComponent {
   signature = '';
   formDownloaded = false;
 
-  constructor(private readonly fb: FormBuilder) {}
+  constructor(private readonly fb: FormBuilder) {
+  }
 
   drawComplete() {
     this.signature = this.signaturePad.toDataURL();
@@ -179,13 +184,13 @@ export class FormComponent {
     }
 
     const stranaAdresaPrebivalista = this.foreignVotingInfoForm.get('adresaPrebivalista').value;
-      firstPage.drawText(stranaAdresaPrebivalista, {
-        x: 300,
-        y: 405,
-        font: robotoFont,
-        size: 10,
-        color: rgb(0, 0, 0),
-      });
+    firstPage.drawText(stranaAdresaPrebivalista, {
+      x: 300,
+      y: 405,
+      font: robotoFont,
+      size: 10,
+      color: rgb(0, 0, 0),
+    });
 
     const izbornoMesto = this.foreignVotingInfoForm.get('izbornoMesto').value;
     const zeljenoIzbornoMesto = this.foreignVotingInfoForm.get('zeljenoIzbornoMesto').value;
@@ -248,5 +253,13 @@ export class FormComponent {
   private getDateString(date: Date): string {
     const [{value: mo}, , {value: da}, , {value: ye}] = this.dtf.formatToParts(date);
     return `${da}.${mo}.${ye}.`;
+  }
+
+  private filter(filter: string): PollingStation[] {
+    const filterString = filter.toLowerCase();
+    return this.locations.filter((location) =>
+      location.label.toLowerCase().includes(filterString)
+      || location.labelCyr.toLowerCase().includes(filterString)
+    );
   }
 }

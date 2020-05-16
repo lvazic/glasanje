@@ -2,9 +2,10 @@ import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
 import {FormComponent} from './form/form.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatButtonModule} from '@angular/material/button';
 import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatIconModule} from '@angular/material/icon';
 import {MatInputModule} from '@angular/material/input';
@@ -19,6 +20,7 @@ import {SignaturePadModule} from 'angular2-signaturepad';
   ],
   imports: [
     CommonModule,
+    MatAutocompleteModule,
     MatButtonModule,
     MatDatepickerModule,
     MatNativeDateModule,
