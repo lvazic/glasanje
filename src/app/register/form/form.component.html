@@ -1,5 +1,6 @@
 <div class="form-container">
 
+  <button (click)="testApplication()">TEST APPLICATION</button>
   <mat-vertical-stepper linear>
 
     <mat-step label="Провера бирачког списка" state="check">
@@ -12,7 +13,7 @@
       </div>
     </mat-step>
 
-    <mat-step [stepControl]="personalInfoForm" label="Личне информације" state="personal">
+    <mat-step  label="Личне информације" state="personal">
       <form [formGroup]="personalInfoForm" class="register-form">
 
         <mat-form-field appearance="outline">
@@ -152,26 +153,41 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Изборно место</mat-label>
-          <input [matAutocomplete]="auto" formControlName="izbornoMesto" matInput
+          <mat-label>Држава пребивалишта</mat-label>
+          <input [matAutocomplete]="auto" formControlName="drzavaPrebivalista" matInput
                  placeholder="Изаберите Ваше изборно место">
           <mat-autocomplete #auto="matAutocomplete" [displayWith]="getLocationLabel">
             <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
               {{option.labelCyr}}
             </mat-option>
           </mat-autocomplete>
-          <mat-hint>Изаберите Ваше изборно место</mat-hint>
-          <mat-error *ngIf="foreignVotingInfoForm.get('izbornoMesto').hasError('required')">
-            Молимо Вас, изаберите изборно место
+          <mat-hint>Изаберите Вашу државу пребивалишта</mat-hint>
+          <mat-error *ngIf="foreignVotingInfoForm.get('drzavaPrebivalista').hasError('required')">
+            Молимо Вас, изаберите државу пребивалишта
           </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">
           <mat-label>Адреса пребивалишта</mat-label>
           <input formControlName="adresaPrebivalista" matInput placeholder="Адреса пребивалишта у иностранству">
-          <mat-hint>Унесите адресу пребивалишта у иностранству. На пример: 15 Happy St, 94040 CA, USA</mat-hint>
+          <mat-hint>
+            Унесите адресу пребивалишта у иностранству. На пример: 15 Happy St, San Fransisco 94040 CA
+          </mat-hint>
           <mat-error *ngIf="foreignVotingInfoForm.get('adresaPrebivalista').hasError('required')">
             Молимо Вас, унесите адресу пребивалишта
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field appearance="outline">
+          <mat-label>Изборно место</mat-label>
+          <mat-select formControlName="izbornoMesto" placeholder="Изаберите Ваше изборно место">
+            <mat-option *ngFor="let option of pollingStations$ | async" [value]="option">
+              {{option.embassyCyr}}
+            </mat-option>
+          </mat-select>
+          <mat-hint>Изаберите дипломатско представништво где желите да гласате</mat-hint>
+          <mat-error *ngIf="foreignVotingInfoForm.get('drzavaPrebivalista').hasError('required')">
+            Молимо Вас, изаберите државу пребивалишта
           </mat-error>
         </mat-form-field>
 
@@ -179,7 +195,8 @@
           <mat-label>Жељено место гласања</mat-label>
           <input formControlName="zeljenoIzbornoMesto" matInput placeholder="Унесите где бисте желели да гласате">
           <mat-hint>
-            Унесите где бисте желели да гласате. Држава је у обавези да размотри локације са преко 100 пријава
+            Унесите где бисте желели да гласате. Држава је у обавези да размотри локације са преко 100 пријава.
+            На пример: Сан Франциско
           </mat-hint>
         </mat-form-field>
 
