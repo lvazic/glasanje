@@ -5,7 +5,9 @@
     <mat-step label="Провера бирачког списка" state="check">
       <p>Проверите да ли сте уписани у <a href="https://upit.birackispisak.gov.rs/" target="_blank">бирачки списак</a> и
         вратите се на ову страницу.</p>
-      <p>Ако нисте уписани контактирајте Министарство иностраних послова <a href="http://www.mfa.gov.rs/sr/index.php/o-ministarstvu/kontakt">овде.</p>
+      <p>Ако нисте уписани контактирајте
+        <a href="http://www.mfa.gov.rs/sr/index.php/o-ministarstvu/kontakt">Министарство иностраних послова</a>.
+      </p>
 
       <div class="action-button">
         <button color="primary" mat-flat-button matStepperNext>Настави</button>
@@ -219,6 +221,13 @@
         </signature-pad>
         <button (click)="eraseSignature()" [disabled]="!signatureSet" mat-button>Обриши</button>
       </div>
+
+      <p>То је то! Следећи кораци:</p>
+      <ol>
+        <li>Сликајте прву страну пасоша</li>
+        <li>Преузмите формулар кликом на дугме</li>
+        <li>Пошаљите поруку амбасади кликом на дугме и приложите слику пасоша и формулар</li>
+      </ol>
 
       <div class="complete-button">
         <button (click)="generateApplication(); formDownloaded=true"

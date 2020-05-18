@@ -202,10 +202,10 @@ export class FormComponent {
     const izbornoMesto: PollingStation = this.foreignVotingInfoForm.get('izbornoMesto')!.value;
     const to = izbornoMesto.email;
     const subject = 'Registracija za glasanje iz inostranstva';
-    const body = 'Poštovani, \nPrilažem formular i prvu stranu pasoša za registraciju za glasanje iz inostranstva.' +
-      ' \nSa' +
-      ' poštovanjem';
-    window.open(`mailto:${to}?subject=${subject}&body=${body}`, "_blank"); //На Џимејлу на Андроиду није правио нове линије (све је било једна линија). Није велики проблем
+    const body = `Poštovani, %0D%0APrilažem formular i prvu stranu pasoša za registraciju za glasanje iz inostranstva.` +
+      ` %0D%0ASa` +
+      ` poštovanjem`;
+    window.open(`mailto:${to}?subject=${subject}&body=${body}`, "_blank");
   }
 
   private writeContent(content: string | PDFImage, spec: ContentWriteSpec, page: PDFPage, font: PDFFont) {
