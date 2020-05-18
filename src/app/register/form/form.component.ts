@@ -96,6 +96,10 @@ export class FormComponent {
     return country.labelCyr;
   }
 
+  getCountryFlagUrl(country: VotingCountry) {
+    return `https://www.countryflags.io/${country.countryCode}/flat/24.png`;
+  }
+
   drawComplete() {
     this.signature = this.signaturePad.toDataURL();
   }

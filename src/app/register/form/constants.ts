@@ -193,7 +193,7 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
   ],
   [
     {
-      countryCode: 'АТ',
+      countryCode: 'AT',
       label: 'Austrija',
       labelCyr: 'Аустрија',
     }, [

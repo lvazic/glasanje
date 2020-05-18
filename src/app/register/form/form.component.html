@@ -12,7 +12,7 @@
       </div>
     </mat-step>
 
-    <mat-step [stepControl]="personalInfoForm" label="Личне информације" state="personal">
+    <mat-step  label="Личне информације" state="personal">
       <form [formGroup]="personalInfoForm" class="register-form">
 
         <mat-form-field appearance="outline">
@@ -157,7 +157,10 @@
                  placeholder="Изаберите Вашу државу пребивалишта">
           <mat-autocomplete #auto="matAutocomplete" [displayWith]="getCountryLabel">
             <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
-              {{option.labelCyr}}
+              <span class="country-option">
+                <img aria-hidden [src]="getCountryFlagUrl(option)" height="25">
+                <span>{{option.labelCyr}}</span>
+              </span>
             </mat-option>
           </mat-autocomplete>
           <mat-hint>Изаберите Вашу државу пребивалишта</mat-hint>
