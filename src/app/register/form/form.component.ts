@@ -130,7 +130,7 @@ export class FormComponent {
     this.writeContent(ime, getContentWriteSpec(ContentType.SIGN_NAME), firstPage, robotoFont);
 
     const datumRodjenja = this.getDateString(this.personalInfoForm.get('datumRodjenja').value);
-    const mestoRodjenja = this.getDateString(this.personalInfoForm.get('mestoRodjenja').value);
+    const mestoRodjenja = this.personalInfoForm.get('mestoRodjenja').value;
     const datumIMesto = `${datumRodjenja} ${mestoRodjenja}`;
     this.writeContent(datumIMesto, getContentWriteSpec(ContentType.DATE_OF_BIRTH), firstPage, robotoFont);
 
