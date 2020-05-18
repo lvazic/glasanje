@@ -4,7 +4,6 @@ import {STEPPER_GLOBAL_OPTIONS} from '@angular/cdk/stepper';
 
 import {PDFDocument, PDFFont, PDFImage, PDFPage, rgb} from 'pdf-lib';
 import fontkit from '@pdf-lib/fontkit'
-
 import * as download from 'downloadjs';
 import {SignaturePad} from 'angular2-signaturepad';
 import {
@@ -268,8 +267,9 @@ export class FormComponent {
       buffer += `${segment}, `;
       bufferCharLength += segment.length;
       index++;
+      const nextSegmentLength = addressSegments[index] ? addressSegments[index].length : 0;
       if (bufferCharLength > MAX_ADDRESS_LINE_CHAR_LENGTH
-        || (bufferCharLength + addressSegments[index].length) > MAX_ADDRESS_LINE_CHAR_LENGTH) {
+        || (bufferCharLength + nextSegmentLength) > MAX_ADDRESS_LINE_CHAR_LENGTH) {
         break;
       }
     }
