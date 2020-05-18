@@ -5,7 +5,9 @@
     <mat-step label="Провера бирачког списка" state="check">
       <p>Проверите да ли сте уписани у <a href="https://upit.birackispisak.gov.rs/" target="_blank">бирачки списак</a> и
         вратите се на ову страницу.</p>
-      <p>Ако нисте уписани контактирајте Министарство иностраних послова.</p>
+      <p>Ако нисте уписани контактирајте
+        <a href="http://www.mfa.gov.rs/sr/index.php/o-ministarstvu/kontakt">Министарство иностраних послова</a>.
+      </p>
 
       <div class="action-button">
         <button color="primary" mat-flat-button matStepperNext>Настави</button>
@@ -101,11 +103,11 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Емаил адреса</mat-label>
+          <mat-label>Адреса електронске поште</mat-label>
           <input formControlName="email" matInput placeholder="Емаил адреса">
-          <mat-hint>Емаил адреса путем које Вас амбасада може контактирати.</mat-hint>
+          <mat-hint>Адреса електронске поште путем које Вас амбасада може контактирати.</mat-hint>
           <mat-error *ngIf="personalInfoForm.get('email').hasError('required')">
-            Молимо Вас, унесите емаил адресу
+            Молимо Вас, унесите адресу електронске поште
           </mat-error>
         </mat-form-field>
 
@@ -143,9 +145,9 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Тренутна локација</mat-label>
+          <mat-label>Тренутна локација (за потпис)</mat-label>
           <input formControlName="trenutnaLokacija" matInput placeholder="Тренутна локација">
-          <mat-hint>Место где се тренутно налазите. На пример: Сан Франциско</mat-hint>
+          <mat-hint>Место где се тренутно налазите за потпис формулара. На пример: Сан Франциско</mat-hint>
           <mat-error *ngIf="foreignVotingInfoForm.get('trenutnaLokacija').hasError('required')">
             Молимо Вас, унесите тренутну локацију
           </mat-error>
@@ -181,13 +183,13 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Изборно место</mat-label>
+          <mat-label>Дипломатско представништво (изборно место)</mat-label>
           <mat-select formControlName="izbornoMesto" placeholder="Изаберите Ваше изборно место">
             <mat-option *ngFor="let option of pollingStations$ | async" [value]="option">
               {{option.embassyCyr}}
             </mat-option>
           </mat-select>
-          <mat-hint>Изаберите дипломатско представништво где желите да гласате</mat-hint>
+          <mat-hint>Изаберите најближе дипломатско представништво за гласање</mat-hint>
           <mat-error *ngIf="foreignVotingInfoForm.get('drzavaPrebivalista').hasError('required')">
             Молимо Вас, изаберите државу пребивалишта
           </mat-error>
@@ -219,6 +221,13 @@
         </signature-pad>
         <button (click)="eraseSignature()" [disabled]="!signatureSet" mat-button>Обриши</button>
       </div>
+
+      <p>То је то! Следећи кораци:</p>
+      <ol>
+        <li>Сликајте прву страну пасоша</li>
+        <li>Преузмите формулар кликом на дугме</li>
+        <li>Пошаљите поруку амбасади кликом на дугме и приложите слику пасоша и формулар</li>
+      </ol>
 
       <div class="complete-button">
         <button (click)="generateApplication(); formDownloaded=true"
