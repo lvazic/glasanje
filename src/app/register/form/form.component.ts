@@ -16,6 +16,11 @@ import {
 } from "./constants";
 import {map, startWith} from 'rxjs/operators';
 
+interface Gender {
+  label: string;
+  labelCyr: string;
+}
+
 const MAX_ADDRESS_LINE_CHAR_LENGTH = 55;
 
 @Component({
@@ -68,6 +73,11 @@ export class FormComponent {
     'zeljenoIzbornoMesto': this.fb.control(''),
   });
 
+  readonly genderMap = new Map<string, Gender>([
+    ['m', {label: 'Muški', labelCyr: 'Мушки'},],
+    ['z', {label: 'Ženski', labelCyr: 'Женски'},]
+  ]);
+
   readonly filteredOptions$ = this.foreignVotingInfoForm.get('drzavaPrebivalista')!.valueChanges.pipe(
     startWith(''), map((val) => this.filter(val)));
   readonly pollingStations$ = this.foreignVotingInfoForm.get('drzavaPrebivalista')!.valueChanges.pipe(
@@ -114,6 +124,7 @@ export class FormComponent {
   async generateApplication() {
     const robotoUrl = 'assets/Roboto-Regular.ttf';
     const fontBytes = await fetch(robotoUrl).then((res) => res.arrayBuffer());
+    const cyrillicPattern = /^[\u0400-\u04FF]+$/;
 
     const documentUrl = 'assets/VotingRequestDocument.pdf';
     const existingPdfBytes = await fetch(documentUrl).then(res => res.arrayBuffer());
@@ -126,6 +137,7 @@ export class FormComponent {
     const firstPage = pages[0];
 
     const ime = this.personalInfoForm.get('ime').value;
+    const isCyrillic = cyrillicPattern.test(ime);
     this.writeContent(ime, getContentWriteSpec(ContentType.FULL_NAME), firstPage, robotoFont);
     this.writeContent(ime, getContentWriteSpec(ContentType.SIGN_NAME), firstPage, robotoFont);
 
@@ -134,8 +146,10 @@ export class FormComponent {
     const datumIMesto = `${datumRodjenja} ${mestoRodjenja}`;
     this.writeContent(datumIMesto, getContentWriteSpec(ContentType.DATE_OF_BIRTH), firstPage, robotoFont);
 
-    const pol = this.personalInfoForm.get('pol').value;
-    this.writeContent(pol, getContentWriteSpec(ContentType.GENDER), firstPage, robotoFont);
+    const polKey = this.personalInfoForm.get('pol').value;
+    const pol = this.genderMap.get(polKey);
+    this.writeContent(isCyrillic ? pol.labelCyr : pol.label,
+      getContentWriteSpec(ContentType.GENDER), firstPage, robotoFont);
 
     const imeRoditelja = this.personalInfoForm.get('imeRoditelja').value;
     this.writeContent(imeRoditelja, getContentWriteSpec(ContentType.PARENT_NAME), firstPage, robotoFont);
@@ -168,7 +182,7 @@ export class FormComponent {
     }
 
     const drzavaPrebivalista: VotingCountry = this.foreignVotingInfoForm.get('drzavaPrebivalista').value;
-    this.writeContent(drzavaPrebivalista.labelCyr,
+    this.writeContent(isCyrillic ? drzavaPrebivalista.labelCyr : drzavaPrebivalista.label,
       getContentWriteSpec(ContentType.FOREIGN_COUNTRY), firstPage, robotoFont);
 
     const stranaAdresaPrebivalista = this.foreignVotingInfoForm.get('adresaPrebivalista').value;
@@ -176,8 +190,9 @@ export class FormComponent {
       getContentWriteSpec(ContentType.FOREIGN_ADDRESS), firstPage, robotoFont);
 
     const izbornoMesto: PollingStation = this.foreignVotingInfoForm.get('izbornoMesto').value;
+    const izbornoMestoScriptAdjusted = isCyrillic ? izbornoMesto.embassyCyr : izbornoMesto.embassy;
     const zeljenoIzbornoMesto = this.foreignVotingInfoForm.get('zeljenoIzbornoMesto').value;
-    this.writeContent(zeljenoIzbornoMesto ? zeljenoIzbornoMesto : izbornoMesto.embassyCyr,
+    this.writeContent(zeljenoIzbornoMesto ? zeljenoIzbornoMesto : izbornoMestoScriptAdjusted,
       getContentWriteSpec(ContentType.POLL_STATION), firstPage, robotoFont);
 
     const trenutnaLokacija = this.foreignVotingInfoForm.get('trenutnaLokacija').value;

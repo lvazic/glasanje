@@ -50,8 +50,8 @@
         <mat-form-field appearance="outline">
           <mat-label>Пол</mat-label>
           <mat-select formControlName="pol" placeholder="Изаберите Ваш пол">
-            <mat-option value="Мушки">Мушки</mat-option>
-            <mat-option value="Женски">Женски</mat-option>
+            <mat-option value="m">Мушки</mat-option>
+            <mat-option value="z">Женски</mat-option>
           </mat-select>
           <mat-hint>Изаберите Ваш пол</mat-hint>
           <mat-error *ngIf="personalInfoForm.get('pol').hasError('required')">
