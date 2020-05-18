@@ -154,8 +154,8 @@
         <mat-form-field appearance="outline">
           <mat-label>Држава пребивалишта</mat-label>
           <input [matAutocomplete]="auto" formControlName="drzavaPrebivalista" matInput
-                 placeholder="Изаберите Ваше изборно место">
-          <mat-autocomplete #auto="matAutocomplete" [displayWith]="getLocationLabel">
+                 placeholder="Изаберите Вашу државу пребивалишта">
+          <mat-autocomplete #auto="matAutocomplete" [displayWith]="getCountryLabel">
             <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
               {{option.labelCyr}}
             </mat-option>
@@ -191,11 +191,11 @@
         </mat-form-field>
 
         <mat-form-field appearance="outline">
-          <mat-label>Жељено место гласања</mat-label>
+          <mat-label>Жељено место гласања (ако не желите да путујете до представништва)</mat-label>
           <input formControlName="zeljenoIzbornoMesto" matInput placeholder="Унесите где бисте желели да гласате">
           <mat-hint>
             Унесите где бисте желели да гласате. Држава је у обавези да размотри локације са преко 100 пријава.
-            На пример: Сан Франциско
+            На пример: Сан Франциско. Ако оставите празно подразумева се изабрано дипломатско представништво
           </mat-hint>
         </mat-form-field>
 

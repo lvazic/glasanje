@@ -68,8 +68,6 @@ export function getContentWriteSpec(contentType: ContentType) {
 
 /** Describes a polling station. */
 export interface PollingStation {
-  label: string;
-  labelCyr: string;
   embassy: string;
   embassyCyr: string;
   email: string;
@@ -91,8 +89,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Авганистан',
     }, [
     {
-      label: 'Indija',
-      labelCyr: 'Индија',
       embassy: 'Ambasada Srbije u Indiji',
       embassyCyr: 'Амбасада Србије у Индији',
       email: 'embassyofserbiadelhi@hotmail.com',
@@ -106,8 +102,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Албанија',
     }, [
     {
-      label: 'Albanija',
-      labelCyr: 'Албанија',
       embassy: 'Ambasada Srbije u Albaniji',
       embassyCyr: 'Амбасада Србије у Албанији',
       email: 'ambatira@icc-al.org'
@@ -121,8 +115,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Алжир',
     }, [
     {
-      label: 'Alžir',
-      labelCyr: 'Алжир',
       embassy: 'Ambasada Srbije u Alžiru',
       embassyCyr: 'Амбасада Србије у Алжиру',
       email: 'ambasada@ambserbie-alger.com'
@@ -136,15 +128,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Аустралија',
     }, [
     {
-      label: 'Australija',
-      labelCyr: 'Аустралија',
       embassy: 'Ambasada Srbije u Australiji, Kanbera',
       embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
       email: 'embassy.canberra@serbia.org.au',
     },
     {
-      label: 'Australija',
-      labelCyr: 'Аустралија',
       embassy: 'Konzulat Srbije u Australiji, Sidnej',
       embassyCyr: 'Конзулат Србије у Аустралији, Сиднеј',
       email: 'gkrssid@optusnet.com.au',
@@ -158,8 +146,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Андора',
     }, [
     {
-      label: 'Andora',
-      labelCyr: 'Андора',
       embassy: 'Ambasada Srbije u Španiji',
       embassyCyr: 'Амбасада Србије у Шпанији',
       email: 'konz.madrid@mfa.rs',
@@ -173,8 +159,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Ангола',
     }, [
     {
-      label: 'Angola',
-      labelCyr: 'Ангола',
       embassy: 'Ambasada Srbije u Angoli',
       embassyCyr: 'Амбасада Србије у Анголи',
       email: 'serbiaemb@netcabo.co.ao',
@@ -188,8 +172,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Антигва и Барбуда',
     }, [
     {
-      label: 'Antigva i Barbuda',
-      labelCyr: 'Антигва и Барбуда',
       embassy: 'Ambasada Srbije u SAD, Vašington',
       embassyCyr: 'Амбасада Србије у САД, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -203,8 +185,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Аргентина',
     }, [
     {
-      label: 'Argentina',
-      labelCyr: 'Аргентина',
       embassy: 'Ambasada Srbije u Argentini',
       embassyCyr: 'Амбасада Србије у Аргентини',
       email: 'consulado@serbembaires.com.ar',
@@ -218,15 +198,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Аустрија',
     }, [
     {
-      label: 'Austrija',
-      labelCyr: 'Аустрија',
       embassy: 'Ambasada Srbije u Austriji, Beč',
       embassyCyr: 'Амбасада Србије у Аустрији, Беч',
       email: 'consulate.vienna@mfa.rs',
     },
     {
-      label: 'Austrija',
-      labelCyr: 'Аустрија',
       embassy: 'Konzulat Srbije u Austriji, Salcburg',
       embassyCyr: 'Конзулат Србије у Аустрији, Салцбург',
       email: 'genconsulate.salzburg@mfa.rs',
@@ -240,8 +216,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Азербејџан',
     }, [
     {
-      label: 'Azerbejdžan',
-      labelCyr: 'Азербејџан',
       embassy: 'Ambasada Srbije u Azerbejdžanu',
       embassyCyr: 'Амбасада Србије у Азербејџану',
       email: 'serbianembassy.baku@azeurotel.com',
@@ -255,8 +229,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бахами',
     }, [
     {
-      label: 'Bahami',
-      labelCyr: 'Бахами',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -270,8 +242,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бахреин',
     }, [
     {
-      label: 'Bahrein',
-      labelCyr: 'Бахреин',
       embassy: 'Ambasada Srbije u Kuvajtu',
       embassyCyr: 'Амбасада Србије у Кувајту',
       email: 'serbkonzkw@gmail.com',
@@ -285,8 +255,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бангладеш',
     }, [
     {
-      label: 'Bangladeš',
-      labelCyr: 'Бангладеш',
       embassy: 'Ambasada Srbije u Indiji',
       embassyCyr: 'Амбасада Србије у Индији',
       email: 'embassyofserbiadelhi@hotmail.com',
@@ -300,8 +268,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Барбадос',
     }, [
     {
-      label: 'Barbados',
-      labelCyr: 'Барбадос',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -315,8 +281,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Белгија',
     }, [
     {
-      label: 'Belgija',
-      labelCyr: 'Белгија',
       embassy: 'Ambasada Srbije u Belgiji',
       embassyCyr: 'Амбасада Србије у Белгији',
       email: 'embassy.brussels@mfa.rs',
@@ -330,8 +294,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Белизе',
     }, [
     {
-      label: 'Belize',
-      labelCyr: 'Белизе',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -345,8 +307,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Белорусија',
     }, [
     {
-      label: 'Belorusija',
-      labelCyr: 'Белорусија',
       embassy: 'Ambasada Srbije u Belorusiji',
       embassyCyr: 'Амбасада Србије у Белорусији',
       email: 'embassy.minsk@mfa.rs',
@@ -360,8 +320,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бенин',
     }, [
     {
-      label: 'Benin',
-      labelCyr: 'Бенин',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -375,8 +333,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Боцвана',
     }, [
     {
-      label: 'Bocvana',
-      labelCyr: 'Боцвана',
       embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
       embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
       email: 'info@srbembassy.org.za',
@@ -390,8 +346,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Боливија',
     }, [
     {
-      label: 'Bolivija',
-      labelCyr: 'Боливија',
       embassy: 'Ambasada Srbije u Brazilu',
       embassyCyr: 'Амбасада Србије у Бразилу',
       email: 'embaixadaservia@terra.com.br',
@@ -405,33 +359,23 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Босна и Херцеговина',
     }, [
     {
-      label: 'Bosna i Hercegovina',
-      labelCyr: 'Босна и Херцеговина',
       embassy: 'Konzulat Srbije u Bosni i Hercegovini, Banja Luka',
       embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Бања Лука',
       email: 'konzulat.bl@mfa.rs',
     },
     {
-      label: 'Bosna i Hercegovina',
-      labelCyr: 'Босна и Херцеговина',
       embassy: 'Konzulat Srbije u Bosni i Hercegovini, Drvar',
       embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Дрвар',
       email: 'kk.rs-drvar@ktsara.net',
     }, {
-      label: 'Bosna i Hercegovina',
-      labelCyr: 'Босна и Херцеговина',
       embassy: 'Konzulat Srbije u Bosni i Hercegovini, Mostar',
       embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Мостар',
       email: 'gk.mostar@mfa.rs',
     }, {
-      label: 'Bosna i Hercegovina',
-      labelCyr: 'Босна и Херцеговина',
       embassy: 'Konzulat Srbije u Bosni i Hercegovini, Trebinje',
       embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Требиње',
       email: 'kk.trebinje@mfa.rs',
     }, {
-      label: 'Bosna i Hercegovina',
-      labelCyr: 'Босна и Херцеговина',
       embassy: 'Ambasada Srbije u Bosni i Hercegovini, Sarajevo',
       embassyCyr: 'Амбасада Србије у Босни и Херцеговини, Сарајево',
       email: 'srbamba@bih.net.ba',
@@ -445,8 +389,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бразил',
     }, [
     {
-      label: 'Brazil',
-      labelCyr: 'Бразил',
       embassy: 'Ambasada Srbije u Brazilu',
       embassyCyr: 'Амбасада Србије у Бразилу',
       email: 'embaixadaservia@terra.com.br',
@@ -460,8 +402,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Брунеј Дарусалам',
     }, [
     {
-      label: 'Brunej Darusalam',
-      labelCyr: 'Брунеј Дарусалам',
       embassy: 'Ambasada Srbije u Indoneziji',
       embassyCyr: 'Амбасада Србије у Индонезији',
       email: 'embjakarta@serbian-embassy.org',
@@ -475,8 +415,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бугарска',
     }, [
     {
-      label: 'Bugarska',
-      labelCyr: 'Бугарска',
       embassy: 'Ambasada Srbije u Bugarskoj',
       embassyCyr: 'Амбасада Србије у Бугарској',
       email: 'sofia@emb-serbia.com',
@@ -490,8 +428,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Буркина Фасо',
     }, [
     {
-      label: 'Burkina Faso',
-      labelCyr: 'Буркина Фасо',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -505,8 +441,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бурунди',
     }, [
     {
-      label: 'Burundi',
-      labelCyr: 'Бурунди',
       embassy: 'Ambasada Srbije u Keniji',
       embassyCyr: 'Амбасада Србије у Кенији',
       email: 'nairobi@embassyofserbia.or.ke',
@@ -520,8 +454,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Бутан',
     }, [
     {
-      label: 'Butan',
-      labelCyr: 'Бутан',
       embassy: 'Ambasada Srbije u Indiji',
       embassyCyr: 'Амбасада Србије у Индији',
       email: 'embassyofserbiadelhi@hotmail.com',
@@ -535,8 +467,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Чад',
     }, [
     {
-      label: 'Čad',
-      labelCyr: 'Чад',
       embassy: 'Ambasada Srbije u Libiji',
       embassyCyr: 'Амбасада Србије у Либији',
       email: 'serbianembassy_tripoli@yahoo.com',
@@ -550,8 +480,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Централноафричка Република',
     }, [
     {
-      label: 'Centralnoafrička Republika',
-      labelCyr: 'Централноафричка Република',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -565,8 +493,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Чешка',
     }, [
     {
-      label: 'Češka Republika',
-      labelCyr: 'Чешка',
       embassy: 'Ambasada Srbije u Češkoj Republici',
       embassyCyr: 'Амбасада Србије у Чешкој Републици',
       email: 'konzularno.prag@mfa.rs',
@@ -580,8 +506,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Чиле',
     }, [
     {
-      label: 'Čile',
-      labelCyr: 'Чиле',
       embassy: 'Ambasada Srbije u Argentini',
       embassyCyr: 'Амбасада Србије у Аргентини',
       email: 'consulado@serbembaires.com.ar',
@@ -595,15 +519,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Црна Гора',
     }, [
     {
-      label: 'Crna Gora',
-      labelCyr: 'Црна Гора',
       embassy: 'Konzulat Srbije u Crnoj Gori, Herceg Novi',
       embassyCyr: 'Конзулат Србије у Црној Гори, Херцег Нови',
       email: 'gkh.novi@mfa.rs',
     },
     {
-      label: 'Crna Gora',
-      labelCyr: 'Црна Гора',
       embassy: 'Ambasada Srbije u Crnoj Gori, Podgorica',
       embassyCyr: 'Амбасада Србије у Црној Гори, Подгорица',
       email: 'embassy.podgorica@mfa.rs',
@@ -617,8 +537,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Данска',
     }, [
     {
-      label: 'Danska',
-      labelCyr: 'Данска',
       embassy: 'Ambasada Srbije u Danskoj',
       embassyCyr: 'Амбасада Србије у Данској',
       email: 'serbianemb@city.dk',
@@ -632,8 +550,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Доминикана',
     }, [
     {
-      label: 'Dominikana',
-      labelCyr: 'Доминикана',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -647,8 +563,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Доминиканска Република',
     }, [
     {
-      label: 'Dominikanska Republika',
-      labelCyr: 'Доминиканска Република',
       embassy: 'Ambasada Srbije na Kubi',
       embassyCyr: 'Амбасада Србије на Куби',
       email: 'konzsrbhav@gmail.com',
@@ -662,8 +576,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Џибути',
     }, [
     {
-      label: 'Džibuti',
-      labelCyr: 'Џибути',
       embassy: 'Ambasada Srbije u Etiopiji',
       embassyCyr: 'Амбасада Србије у Етиопији',
       email: 'serbambadis@yahoo.com',
@@ -677,8 +589,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Египат',
     }, [
     {
-      label: 'Egipat',
-      labelCyr: 'Египат',
       embassy: 'Ambasada Srbije u Egiptu',
       embassyCyr: 'Амбасада Србије у Египту',
       email: 'konzul@serbiaeg.com',
@@ -692,8 +602,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Еквадор',
     }, [
     {
-      label: 'Ekvador',
-      labelCyr: 'Еквадор',
       embassy: 'Ambasada Srbije u Brazilu',
       embassyCyr: 'Амбасада Србије у Бразилу',
       email: 'embaixadaservia@terra.com.br',
@@ -707,8 +615,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гвинеја',
     }, [
     {
-      label: 'Ekvatorijalna Gvineja',
-      labelCyr: 'Гвинеја',
       embassy: 'Ambasada Srbije u Angoli',
       embassyCyr: 'Амбасада Србије у Анголи',
       email: 'serbiaemb@netcabo.co.ao',
@@ -722,8 +628,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Еритреја',
     }, [
     {
-      label: 'Eritreja',
-      labelCyr: 'Еритреја',
       embassy: 'Ambasada Srbije u Keniji',
       embassyCyr: 'Амбасада Србије у Кенији',
       email: 'nairobi@embassyofserbia.or.ke',
@@ -737,8 +641,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Естонија',
     }, [
     {
-      label: 'Estonija',
-      labelCyr: 'Естонија',
       embassy: 'Ambasada Srbije u Finskoj',
       embassyCyr: 'Амбасада Србије у Финској',
       email: 'serbia@kolumbus.fi',
@@ -752,8 +654,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Етиопија',
     }, [
     {
-      label: 'Etiopija',
-      labelCyr: 'Етиопија',
       embassy: 'Ambasada Srbije u Etiopiji',
       embassyCyr: 'Амбасада Србије у Етиопији',
       email: 'serbambadis@yahoo.com',
@@ -767,8 +667,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Фиџи',
     }, [
     {
-      label: 'Fidži',
-      labelCyr: 'Фиџи',
       embassy: 'Ambasada Srbije u Australiji, Kanbera',
       embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
       email: 'embassy.canberra@serbia.org.au',
@@ -782,8 +680,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Филипини',
     }, [
     {
-      label: 'Filipini',
-      labelCyr: 'Филипини',
       embassy: 'Ambasada Srbije u Indoneziji',
       embassyCyr: 'Амбасада Србије у Индонезији',
       email: 'embjakarta@serbian-embassy.org',
@@ -797,8 +693,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Финска',
     }, [
     {
-      label: 'Finska',
-      labelCyr: 'Финска',
       embassy: 'Ambasada Srbije u Finskoj',
       embassyCyr: 'Амбасада Србије у Финској',
       email: 'serbia@kolumbus.fi',
@@ -812,15 +706,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Француска',
     }, [
     {
-      label: 'Francuska',
-      labelCyr: 'Француска',
       embassy: 'Ambasada Srbije u Francuskoj, Pariz',
       embassyCyr: 'Амбасада Србије у Француској, Париз',
       email: 'konzularno.pariz@mfa.rs',
     },
     {
-      label: 'Francuska',
-      labelCyr: 'Француска',
       embassy: 'Konzulat Srbije u Francuskoj, Strazbur',
       embassyCyr: 'Конзулат Србије у Француској, Стразбур',
       email: 'consulate.strasbourg@mfa.rs',
@@ -834,8 +724,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Габон',
     }, [
     {
-      label: 'Gabon',
-      labelCyr: 'Габон',
       embassy: 'Ambasada Srbije u Angoli',
       embassyCyr: 'Амбасада Србије у Анголи',
       email: 'serbiaemb@netcabo.co.ao',
@@ -849,8 +737,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гамбија',
     }, [
     {
-      label: 'Gambija',
-      labelCyr: 'Гамбија',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -864,8 +750,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гана',
     }, [
     {
-      label: 'Gana',
-      labelCyr: 'Гана',
       embassy: 'Ambasada Srbije u Nigeriji',
       embassyCyr: 'Амбасада Србије у Нигерији',
       email: 'serbconsabuja@gmail.com',
@@ -879,15 +763,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Грчка',
     }, [
     {
-      label: 'Grčka',
-      labelCyr: 'Грчка',
       embassy: 'Ambasada Srbije u Grčkoj, Atina',
       embassyCyr: 'Амбасада Србије у Грчкој, Атина',
       email: 'embassy.athens.consular@mfa.rs',
     },
     {
-      label: 'Grčka',
-      labelCyr: 'Грчка',
       embassy: 'Konzulat Srbije u Grčkoj, Solun',
       embassyCyr: 'Конзулат Србије у Грчкој, Солун',
       email: 'srbcons@otenet.gr',
@@ -901,8 +781,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гренада',
     }, [
     {
-      label: 'Grenada',
-      labelCyr: 'Гренада',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -916,8 +794,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Грузија',
     }, [
     {
-      label: 'Gruzija',
-      labelCyr: 'Грузија',
       embassy: 'Ambasada Srbije u Ukrajini',
       embassyCyr: 'Амбасада Србије у Украјини',
       email: 'konzrs@ukr.net',
@@ -931,8 +807,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гвајана',
     }, [
     {
-      label: 'Gvajana',
-      labelCyr: 'Гвајана',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -946,8 +820,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гватемала',
     }, [
     {
-      label: 'Gvatemala',
-      labelCyr: 'Гватемала',
       embassy: 'Ambasada Srbije u Meksiku',
       embassyCyr: 'Амбасада Србије у Мексику',
       email: 'embajadaserbia@alestra.net.mx',
@@ -961,8 +833,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гвинеја',
     }, [
     {
-      label: 'Gvineja',
-      labelCyr: 'Гвинеја',
       embassy: 'Ambasada Srbije u Alžiru',
       embassyCyr: 'Амбасада Србије у Алжиру',
       email: 'ambasada@ambserbie-alger.com',
@@ -976,8 +846,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Гвинеја Бисао',
     }, [
     {
-      label: 'Gvineja Bisao',
-      labelCyr: 'Гвинеја Бисао',
       embassy: 'Ambasada Srbije u Alžiru',
       embassyCyr: 'Амбасада Србије у Алжиру',
       email: 'ambasada@ambserbie-alger.com',
@@ -991,8 +859,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Хаити',
     }, [
     {
-      label: 'Haiti',
-      labelCyr: 'Хаити',
       embassy: 'Ambasada Srbije na Kubi',
       embassyCyr: 'Амбасада Србије на Куби',
       email: 'konzsrbhav@gmail.com',
@@ -1006,8 +872,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Холандија/Низоземска',
     }, [
     {
-      label: 'Holandija/Nizozemska',
-      labelCyr: 'Холандија/Низоземска',
       embassy: 'Ambasada Srbije u Holandiji',
       embassyCyr: 'Амбасада Србије у Холандији',
       email: 'embassy.hague@mfa.rs',
@@ -1021,8 +885,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Хондурас',
     }, [
     {
-      label: 'Honduras',
-      labelCyr: 'Хондурас',
       embassy: 'Ambasada Srbije u Meksiku',
       embassyCyr: 'Амбасада Србије у Мексику',
       email: 'embajadaserbia@alestra.net.mx',
@@ -1036,22 +898,16 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Хрватска',
     }, [
     {
-      label: 'Hrvatska',
-      labelCyr: 'Хрватска',
       embassy: 'Konzulat Srbije u Hrvatskoj, Rijeka',
       embassyCyr: 'Конзулат Србије у Хрватској, Ријека',
       email: 'konzulat-rijeka@ri.t-com.hr',
     },
     {
-      label: 'Hrvatska',
-      labelCyr: 'Хрватска',
       embassy: 'Konzulat Srbije u Hrvatskoj, Vukovar',
       embassyCyr: 'Конзулат Србије у Хрватској, Вуковар',
       email: 'generalni.konzulat@gk-srbije-vukovar.hr',
     },
     {
-      label: 'Hrvatska',
-      labelCyr: 'Хрватска',
       embassy: 'Ambasada Srbije u Hrvatskoj, Zagreb',
       embassyCyr: 'Амбасада Србије у Хрватској, Загреб',
       email: 'embassy.zagreb@mfa.rs',
@@ -1065,8 +921,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Индија',
     }, [
     {
-      label: 'Indija',
-      labelCyr: 'Индија',
       embassy: 'Ambasada Srbije u Indiji',
       embassyCyr: 'Амбасада Србије у Индији',
       email: 'embassyofserbiadelhi@hotmail.com',
@@ -1080,8 +934,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Индонезија',
     }, [
     {
-      label: 'Indonezija',
-      labelCyr: 'Индонезија',
       embassy: 'Ambasada Srbije u Indoneziji',
       embassyCyr: 'Амбасада Србије у Индонезији',
       email: 'embjakarta@serbian-embassy.org',
@@ -1095,8 +947,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Ирак',
     }, [
     {
-      label: 'Irak',
-      labelCyr: 'Ирак',
       embassy: 'Ambasada Srbije u Iraku',
       embassyCyr: 'Амбасада Србије у Ираку',
       email: 'embsrbag@yahoo.com',
@@ -1110,8 +960,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Иран',
     }, [
     {
-      label: 'Iran',
-      labelCyr: 'Иран',
       embassy: 'Ambasada Srbije u Iranu',
       embassyCyr: 'Амбасада Србије у Ирану',
       email: 'serbembteh@neda.net',
@@ -1125,8 +973,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Ирска',
     }, [
     {
-      label: 'Irska',
-      labelCyr: 'Ирска',
       embassy: 'Ambasada Srbije u Velikoj Britaniji',
       embassyCyr: 'Амбасада Србије у Великој Британији',
       email: 'izbori2020@serbianembassy.org.uk',
@@ -1140,8 +986,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Исланд',
     }, [
     {
-      label: 'Island',
-      labelCyr: 'Исланд',
       embassy: 'Ambasada Srbije u Norveškoj',
       embassyCyr: 'Амбасада Србије у Норвешкој',
       email: 'ambasada@serbianembassy.no',
@@ -1155,8 +999,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Источни Тимор',
     }, [
     {
-      label: 'Istočni Timor',
-      labelCyr: 'Источни Тимор',
       embassy: 'Ambasada Srbije u Indoneziji',
       embassyCyr: 'Амбасада Србије у Индонезији',
       email: 'embjakarta@serbian-embassy.org',
@@ -1170,22 +1012,16 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Италија',
     }, [
     {
-      label: 'Italija',
-      labelCyr: 'Италија',
       embassy: 'Konzulat Srbije u Italiji, Milano',
       embassyCyr: 'Конзулат Србије у Италији, Милано',
       email: 'info@gkrsmi.it',
     },
     {
-      label: 'Italija',
-      labelCyr: 'Италија',
       embassy: 'Ambasada Srbije u Italiji, Rim',
       embassyCyr: 'Амбасада Србије у Италији, Рим',
       email: 'ljubomir.merdovic@mfa.rs',
     },
     {
-      label: 'Italija',
-      labelCyr: 'Италија',
       embassy: 'Konzulat Srbije u Italiji, Trst',
       embassyCyr: 'Конзулат Србије у Италији, Трст',
       email: 'gkrstrst@spin.it',
@@ -1199,8 +1035,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Израел',
     }, [
     {
-      label: 'Izrael',
-      labelCyr: 'Израел',
       embassy: 'Ambasada Srbije u Izraelu',
       embassyCyr: 'Амбасада Србије у Израелу',
       email: 'srbambil@netvision.net.il',
@@ -1214,8 +1048,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јамајка',
     }, [
     {
-      label: 'Jamajka',
-      labelCyr: 'Јамајка',
       embassy: 'Ambasada Srbije na Kubi',
       embassyCyr: 'Амбасада Србије на Куби',
       email: 'konzsrbhav@gmail.com',
@@ -1229,8 +1061,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јапан',
     }, [
     {
-      label: 'Japan',
-      labelCyr: 'Јапан',
       embassy: 'Ambasada Srbije u Japanu',
       embassyCyr: 'Амбасада Србије у Јапану',
       email: 'embassy.tokyo@mfa.rs',
@@ -1244,8 +1074,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јемен',
     }, [
     {
-      label: 'Jemen',
-      labelCyr: 'Јемен',
       embassy: 'Ambasada Srbije u Kuvajtu',
       embassyCyr: 'Амбасада Србије у Кувајту',
       email: 'serbkonzkw@gmail.com',
@@ -1259,8 +1087,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јерменија',
     }, [
     {
-      label: 'Jermenija',
-      labelCyr: 'Јерменија',
       embassy: 'Ambasada Srbije u Grčkoj, Atina',
       embassyCyr: 'Амбасада Србије у Грчкој, Атина',
       email: 'embassy.athens.consular@mfa.rs',
@@ -1274,8 +1100,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јордан',
     }, [
     {
-      label: 'Jordan',
-      labelCyr: 'Јордан',
       embassy: 'Ambasada Srbije u Libanu',
       embassyCyr: 'Амбасада Србије у Либану',
       email: 'embassy@serbia-beirut.rs',
@@ -1289,8 +1113,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јужна Кореја',
     }, [
     {
-      label: 'Južna Koreja, Republika',
-      labelCyr: 'Јужна Кореја, Република',
       embassy: 'Ambasada Srbije u Koreji, Republika',
       embassyCyr: 'Амбасада Србије у Кореји, Република',
       email: 'embserbseul@yahoo.com',
@@ -1304,10 +1126,8 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Јужноафричка Република',
     }, [
     {
-      label: 'Južnoafrička Republika',
-      labelCyr: 'Јужноафричка Република',
       embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-      embassyCyr: 'Амбасада Србије у Јужној Африци',
+      embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
       email: 'info@srbembassy.org.za',
     },
   ],
@@ -1319,8 +1139,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Камбоџа',
     }, [
     {
-      label: 'Kambodža',
-      labelCyr: 'Камбоџа',
       embassy: 'Ambasada Srbije u Indoneziji',
       embassyCyr: 'Амбасада Србије у Индонезији',
       email: 'embjakarta@serbian-embassy.org',
@@ -1334,8 +1152,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Камерун',
     }, [
     {
-      label: 'Kamerun',
-      labelCyr: 'Камерун',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -1349,15 +1165,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Канада',
     }, [
     {
-      label: 'Kanada',
-      labelCyr: 'Канада',
       embassy: 'Ambasada Srbije u Kanadi, Otava',
       embassyCyr: 'Амбасада Србије у Канади, Отава',
       email: 'diplomat@serbianembassy.ca',
     },
     {
-      label: 'Kanada',
-      labelCyr: 'Канада',
       embassy: 'Konzulat Srbije u Kanadi, Toronto',
       embassyCyr: 'Конзулат Србије у Канади, Торонто',
       email: 'gkrstoronto@rogers.com',
@@ -1371,8 +1183,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Катар',
     }, [
     {
-      label: 'Katar',
-      labelCyr: 'Катар',
       embassy: 'Ambasada Srbije u Kataru',
       embassyCyr: 'Амбасада Србије у Катару',
       email: 'embsrbqat@gmail.com',
@@ -1386,8 +1196,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Казахстан',
     }, [
     {
-      label: 'Kazahstan',
-      labelCyr: 'Казахстан',
       embassy: 'Ambasada Srbije u Kazahstanu',
       embassyCyr: 'Амбасада Србије у Казахстану',
       email: 'amb.astana@mail.ru',
@@ -1401,8 +1209,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Кенија',
     }, [
     {
-      label: 'Kenija',
-      labelCyr: 'Кенија',
       embassy: 'Ambasada Srbije u Keniji',
       embassyCyr: 'Амбасада Србије у Кенији',
       email: 'nairobi@embassyofserbia.or.ke',
@@ -1416,15 +1222,11 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Кина',
     }, [
     {
-      label: 'Kina',
-      labelCyr: 'Кина',
       embassy: 'Ambasada Srbije u Kini, Narodna Republika, Peking',
       embassyCyr: 'Амбасада Србије у Кини, Народна Република, Пекинг',
       email: 'embserbia@embserbia.cn',
     },
     {
-      label: 'Kina',
-      labelCyr: 'Кина',
       embassy: 'Konzulat Srbije u Kini, Narodna Republika, Šangaj',
       embassyCyr: 'Конзулат Србије у Кини, Народна Република, Шангај',
       email: 'consulate@srbshanghai.org',
@@ -1438,8 +1240,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Кипар',
     }, [
     {
-      label: 'Kipar',
-      labelCyr: 'Кипар',
       embassy: 'Ambasada Srbije na Kipru',
       embassyCyr: 'Амбасада Србије на Кипру',
       email: 'nicosia@serbia.org.cy',
@@ -1453,8 +1253,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Киргистан',
     }, [
     {
-      label: 'Kirgistan',
-      labelCyr: 'Киргистан',
       embassy: 'Ambasada Srbije u Rusiji',
       embassyCyr: 'Амбасада Србије у Русији',
       email: 'konzularno.moskva@mfa.rs',
@@ -1468,8 +1266,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Колумбија',
     }, [
     {
-      label: 'Kolumbija',
-      labelCyr: 'Колумбија',
       embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
       embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
       email: 'consular@serbiaembusa.org',
@@ -1483,8 +1279,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Комори',
     }, [
     {
-      label: 'Komori',
-      labelCyr: 'Комори',
       embassy: 'Ambasada Srbije u Keniji',
       embassyCyr: 'Амбасада Србије у Кенији',
       email: 'nairobi@embassyofserbia.or.ke',
@@ -1498,8 +1292,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Конго Демократска Република',
     }, [
     {
-      label: 'Kongo, Demokratska Republika',
-      labelCyr: 'Конго Демократска Република',
       embassy: 'Ambasada Srbije u Kongu, DR',
       embassyCyr: 'Амбасада Србије у Конгу, ДР',
       email: 'serbambakin@gmail.com',
@@ -1513,8 +1305,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Конго',
     }, [
     {
-      label: 'Kongo',
-      labelCyr: 'Конго',
       embassy: 'Ambasada Srbije u Angoli',
       embassyCyr: 'Амбасада Србије у Анголи',
       email: 'serbiaemb@netcabo.co.ao',
@@ -1528,8 +1318,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Кореја, ДНР',
     }, [
     {
-      label: 'Koreja, DNR',
-      labelCyr: 'Кореја, ДНР',
       embassy: 'Ambasada Srbije u Kini, Narodna Republika, Peking',
       embassyCyr: 'Амбасада Србије у Кини, Народна Република, Пекинг',
       email: 'embserbia@embserbia.cn',
@@ -1543,8 +1331,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Костарика',
     }, [
     {
-      label: 'Kostarika',
-      labelCyr: 'Костарика',
       embassy: 'Ambasada Srbije u Meksiku',
       embassyCyr: 'Амбасада Србије у Мексику',
       email: 'embajadaserbia@alestra.net.mx',
@@ -1558,8 +1344,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Куба',
     }, [
     {
-      label: 'Kuba',
-      labelCyr: 'Куба',
       embassy: 'Ambasada Srbije na Kubi',
       embassyCyr: 'Амбасада Србије на Куби',
       email: 'konzsrbhav@gmail.com',
@@ -1573,8 +1357,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Кувајт',
     }, [
     {
-      label: 'Kuvajt',
-      labelCyr: 'Кувајт',
       embassy: 'Ambasada Srbije u Kuvajtu',
       embassyCyr: 'Амбасада Србије у Кувајту',
       email: 'serbkonzkw@gmail.com',
@@ -1588,8 +1370,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Лаос',
     }, [
     {
-      label: 'Laos',
-      labelCyr: 'Лаос',
       embassy: 'Ambasada Srbije u Mjanmaru',
       embassyCyr: 'Амбасада Србије у Мјанмару',
       email: 'serbemb@yangon.net.mm',
@@ -1603,8 +1383,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Лесото',
     }, [
     {
-      label: 'Lesoto',
-      labelCyr: 'Лесото',
       embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
       embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
       email: 'info@srbembassy.org.za',
@@ -1618,8 +1396,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Летонија',
     }, [
     {
-      label: 'Letonija',
-      labelCyr: 'Летонија',
       embassy: 'Ambasada Srbije u Švedskoj',
       embassyCyr: 'Амбасада Србије у Шведској',
       email: 'serbiaemb@telia.com',
@@ -1633,8 +1409,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Либан',
     }, [
     {
-      label: 'Liban',
-      labelCyr: 'Либан',
       embassy: 'Ambasada Srbije u Libanu',
       embassyCyr: 'Амбасада Србије у Либану',
       email: 'embassy@serbia-beirut.rs',
@@ -1648,8 +1422,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Либерија',
     }, [
     {
-      label: 'Liberija',
-      labelCyr: 'Либерија',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -1663,8 +1435,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Либија',
     }, [
     {
-      label: 'Libija',
-      labelCyr: 'Либија',
       embassy: 'Ambasada Srbije u Libiji',
       embassyCyr: 'Амбасада Србије у Либији',
       email: 'serbianembassy_tripoli@yahoo.com',
@@ -1678,8 +1448,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Лихтенштајн',
     }, [
     {
-      label: 'Lihtenštajn',
-      labelCyr: 'Лихтенштајн',
       embassy: 'Ambasada Srbije u Švajcarskoj, Bern',
       embassyCyr: 'Амбасада Србије у Швајцарској, Берн',
       email: 'info@ambasadasrbije.ch',
@@ -1693,8 +1461,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Литванија',
     }, [
     {
-      label: 'Litvanija',
-      labelCyr: 'Литванија',
       embassy: 'Ambasada Srbije u Poljskoj',
       embassyCyr: 'Амбасада Србије у Пољској',
       email: 'embassy.warsaw@mfa.rs',
@@ -1708,8 +1474,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Луксембург',
     }, [
     {
-      label: 'Luksemburg',
-      labelCyr: 'Луксембург',
       embassy: 'Ambasada Srbije u Belgiji',
       embassyCyr: 'Амбасада Србије у Белгији',
       email: 'embassy.brussels@mfa.rs',
@@ -1723,8 +1487,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Мадагаскар',
     }, [
     {
-      label: 'Madagaskar',
-      labelCyr: 'Мадагаскар',
       embassy: 'Misija u UN - Njujork',
       embassyCyr: 'Мисија у УН - Њујорк',
       email: 'info@serbiamissionun.org',
@@ -1738,8 +1500,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Мађарска',
     }, [
     {
-      label: 'Mađarska',
-      labelCyr: 'Мађарска',
       embassy: 'Ambasada Srbije u Mađarskoj',
       embassyCyr: 'Амбасада Србије у Мађарској',
       email: 'budapest-consulat@serbiaemb.t-online.hu',
@@ -1753,8 +1513,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Малави',
     }, [
     {
-      label: 'Malavi',
-      labelCyr: 'Малави',
       embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
       embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
       email: 'info@srbembassy.org.za',
@@ -1768,8 +1526,6 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Малдиви',
     }, [
     {
-      label: 'Maldivi',
-      labelCyr: 'Малдиви',
       embassy: 'Ambasada Srbije u Indiji',
       embassyCyr: 'Амбасада Србије у Индији',
       email: 'embassyofserbiadelhi@hotmail.com',
@@ -1783,1282 +1539,1077 @@ export const STATIONS_BY_COUNTRY: Map<VotingCountry, PollingStation[]> = new Map
       labelCyr: 'Малезија',
     }, [
     {
-      label: 'Malezija',
-      labelCyr: 'Малезија',
       embassy: 'Ambasada Srbije u Indoneziji',
       embassyCyr: 'Амбасада Србије у Индонезији',
       email: 'embjakarta@serbian-embassy.org',
     },
   ],
   ],
+  [
+    {
+      countryCode: 'ML',
+      label: 'Mali',
+      labelCyr: 'Мали',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Alžiru',
+      embassyCyr: 'Амбасада Србије у Алжиру',
+      email: 'ambasada@ambserbie-alger.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MT',
+      label: 'Malta',
+      labelCyr: 'Малта',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Italiji, Rim',
+      embassyCyr: 'Амбасада Србије у Италији, Рим',
+      email: 'ljubomir.merdovic@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MA',
+      label: 'Maroko',
+      labelCyr: 'Мароко',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Maroku',
+      embassyCyr: 'Амбасада Србије у Мароку',
+      email: 'ambrsrabat@gmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MU',
+      label: 'Mauricijus',
+      labelCyr: 'Маурицијус',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
+      embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
+      email: 'info@srbembassy.org.za',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MR',
+      label: 'Mauritanija',
+      labelCyr: 'Мауританија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Maroku',
+      embassyCyr: 'Амбасада Србије у Мароку',
+      email: 'ambrsrabat@gmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MX',
+      label: 'Meksiko',
+      labelCyr: 'Мексико',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Meksiku',
+      embassyCyr: 'Амбасада Србије у Мексику',
+      email: 'embajadaserbia@alestra.net.mx',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MM',
+      label: 'Mjanmar',
+      labelCyr: 'Мјанмар',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Mjanmaru',
+      embassyCyr: 'Амбасада Србије у Мјанмару',
+      email: 'serbemb@yangon.net.mm',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MD',
+      label: 'Moldavija',
+      labelCyr: 'Молдавија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Rumuniji, Bukurešt',
+      embassyCyr: 'Амбасада Србије у Румунији, Букурешт',
+      email: 'info@ambserbia.ro',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MC',
+      label: 'Monako',
+      labelCyr: 'Монако',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Francuskoj, Pariz',
+      embassyCyr: 'Амбасада Србије у Француској, Париз',
+      email: 'konzularno.pariz@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MN',
+      label: 'Mongolija',
+      labelCyr: 'Монголија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Kini, Narodna Republika, Peking',
+      embassyCyr: 'Амбасада Србије у Кини, Народна Република, Пекинг',
+      email: 'embserbia@embserbia.cn',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MZ',
+      label: 'Mozambik',
+      labelCyr: 'Мозамбик',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
+      embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
+      email: 'info@srbembassy.org.za',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NA',
+      label: 'Namibija',
+      labelCyr: 'Намибија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
+      embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
+      email: 'info@srbembassy.org.za',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'DE',
+      label: 'Nemačka',
+      labelCyr: 'Немачка',
+    }, [
+    {
+      embassy: 'Konzulat Srbije u Nemačkoj, Diseldorf',
+      embassyCyr: 'Конзулат Србије у Немачкој, Диселдорф',
+      email: 'info@gksrbijedis.de',
+    },
+    {
+      embassy: 'Konzulat Srbije u Nemačkoj, Frankfurt',
+      embassyCyr: 'Конзулат Србије у Немачкој, Франкфурт',
+      email: 'info@gksrbfra.de',
+    },
+    {
+      embassy: 'Konzulat Srbije u Nemačkoj, Hamburg',
+      embassyCyr: 'Конзулат Србије у Немачкој, Хамбург',
+      email: 'gk_hamburg@web.de',
+    },
+    {
+      embassy: 'Konzulat Srbije u Nemačkoj, Minhen',
+      embassyCyr: 'Конзулат Србије у Немачкој, Минхену',
+      email: 'gk.muenchen@mfa.rs',
+    },
+    {
+      embassy: 'Konzulat Srbije u Nemačkoj, Štutgart',
+      embassyCyr: 'Конзулат Србије у Немачкој, Стуттгарт',
+      email: 'gk-stutgart@t-online.de',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NP',
+      label: 'Nepal',
+      labelCyr: 'Непал',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Indiji',
+      embassyCyr: 'Амбасада Србије у Индији',
+      email: 'embassyofserbiadelhi@hotmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NE',
+      label: 'Niger',
+      labelCyr: 'Нигер',
+    }, [
+    {
+      embassy: 'Misija u UN - Njujork',
+      embassyCyr: 'Мисија у УН - Њујорк',
+      email: 'info@serbiamissionun.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NG',
+      label: 'Nigerija',
+      labelCyr: 'Нигерија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Nigeriji',
+      embassyCyr: 'Амбасада Србије у Нигерији',
+      email: 'serbconsabuja@gmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NI',
+      label: 'Nikaragva',
+      labelCyr: 'Никарагва',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Meksiku',
+      embassyCyr: 'Амбасада Србије у Мексику',
+      email: 'embajadaserbia@alestra.net.mx',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NO',
+      label: 'Norveška',
+      labelCyr: 'Норвешка',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Norveškoj',
+      embassyCyr: 'Амбасада Србије у Норвешкој',
+      email: 'ambasada@serbianembassy.no',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'NZ',
+      label: 'Novi Zeland',
+      labelCyr: 'Нови Зеланд',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Australiji, Kanbera',
+      embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
+      email: 'embassy.canberra@serbia.org.au',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'CI',
+      label: 'Obala Slonovače',
+      labelCyr: 'Обала Слоновач',
+    }, [
+    {
+      embassy: 'Misija u UN - Njujork',
+      embassyCyr: 'Мисија у УН - Њујорк',
+      email: 'info@serbiamissionun.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'OM',
+      label: 'Oman',
+      labelCyr: 'Оман',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Egiptu',
+      embassyCyr: 'Амбасада Србије у Египту',
+      email: 'konzul@serbiaeg.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PK',
+      label: 'Pakistan',
+      labelCyr: 'Пакистан',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Iranu',
+      embassyCyr: 'Амбасада Србије у Ирану',
+      email: 'serbembteh@neda.net',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PS',
+      label: 'Palestina',
+      labelCyr: 'Палестина',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Egiptu',
+      embassyCyr: 'Амбасада Србије у Египту',
+      email: 'konzul@serbiaeg.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PA',
+      label: 'Panama',
+      labelCyr: 'Панама',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Meksiku',
+      embassyCyr: 'Амбасада Србије у Мексику',
+      email: 'embajadaserbia@alestra.net.mx',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PG',
+      label: 'Papua Nova Gvineja',
+      labelCyr: 'Папуа Нова Гвинеја',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Australiji, Kanbera',
+      embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
+      email: 'embassy.canberra@serbia.org.au',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PY',
+      label: 'Paragvaj',
+      labelCyr: 'Парагвај',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Argentini',
+      embassyCyr: 'Амбасада Србије у Аргентини',
+      email: 'consulado@serbembaires.com.ar',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PE',
+      label: 'Peru',
+      labelCyr: 'Перу',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Argentini',
+      embassyCyr: 'Амбасада Србије у Аргентини',
+      email: 'consulado@serbembaires.com.ar',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PL',
+      label: 'Poljska',
+      labelCyr: 'Пољска',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Poljskoj',
+      embassyCyr: 'Амбасада Србије у Пољској',
+      email: 'embassy.warsaw@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'PT',
+      label: 'Portugal',
+      labelCyr: 'Португал',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Portugalu',
+      embassyCyr: 'Амбасада Србије у Португалу',
+      email: 'serviaemba@netcabo.pt',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'RW',
+      label: 'Ruanda',
+      labelCyr: 'Руанда',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Keniji',
+      embassyCyr: 'Амбасада Србије у Кенији',
+      email: 'nairobi@embassyofserbia.or.ke',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'RO',
+      label: 'Rumunija',
+      labelCyr: 'Румунија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Rumuniji, Bukurešt',
+      embassyCyr: 'Амбасада Србије у Румунији, Букурешт',
+      email: 'info@ambserbia.ro',
+    },
+    {
+      embassy: 'Konzulat Srbije u Rumuniji, Temišvar',
+      embassyCyr: 'Конзулат Србије у Румунији, Темишвар',
+      email: 'gktemisvar@gmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'RU',
+      label: 'Rusija',
+      labelCyr: 'Русија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Rusiji, Moskva',
+      embassyCyr: 'Амбасада Србије у Русији, Москва',
+      email: 'konzularno.moskva@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'US',
+      label: 'Sjedinjene Američke Države (SAD)',
+      labelCyr: 'Сједињене Америчке Државе (САД)',
+    }, [
+    {
+      embassy: 'Konzulat Srbije u Sjedinjenim Američkim Državama, Čikago',
+      embassyCyr: 'Конзулат Србије у Сједињеним Америчким Државама, Чикаго',
+      email: 'info@scgchicago.org',
+    },
+    {
+      embassy: 'Konzulat Srbije u Sjedinjenim Američkim Državama, Njujork',
+      embassyCyr: 'Конзулат Србије у Сједињеним Америчким Државама, Њујорк',
+      email: 'izbori.njujork2020@mfa.rs',
+    },
+    {
+      embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
+      embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
+      email: 'consular@serbiaembusa.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SV',
+      label: 'Salvador',
+      labelCyr: 'Салвадор',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Meksiku',
+      embassyCyr: 'Амбасада Србије у Мексику',
+      email: 'embajadaserbia@alestra.net.mx',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'WS',
+      label: 'Samoa',
+      labelCyr: 'Самоа',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Australiji, Kanbera',
+      embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
+      email: 'embassy.canberra@serbia.org.au',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SM',
+      label: 'San Marino',
+      labelCyr: 'Сан Марино',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Italiji, Rim',
+      embassyCyr: 'Амбасада Србије у Италији, Рим',
+      email: 'ljubomir.merdovic@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'ST',
+      label: 'Sao Tome i Principe',
+      labelCyr: 'Сао Томе и Принципе',
+    }, [
+    {
+      embassy: 'Misija u UN - Njujork',
+      embassyCyr: 'Мисија у УН - Њујорк',
+      email: 'info@serbiamissionun.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SA',
+      label: 'Saudijska Arabija',
+      labelCyr: 'Саудијска Арабија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Saudijskoj Arabiji',
+      embassyCyr: 'Амбасада Србије у Саудијској Арабији',
+      email: 'embsrb.riyadh@yahoo.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SC',
+      label: 'Sejšeli',
+      labelCyr: 'Сејшели',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Etiopiji',
+      embassyCyr: 'Амбасада Србије у Етиопији',
+      email: 'serbambadis@yahoo.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SN',
+      label: 'Senegal',
+      labelCyr: 'Сенегал',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Maroku',
+      embassyCyr: 'Амбасада Србије у Мароку',
+      email: 'ambrsrabat@gmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'KN',
+      label: 'Sent Kits i Nevis',
+      labelCyr: 'Сент Китс и Невис',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
+      embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
+      email: 'consular@serbiaembusa.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'VC',
+      label: 'Sent Vinsent i Grenadini',
+      labelCyr: 'Сент Винсент и Гренадини',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
+      embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
+      email: 'consular@serbiaembusa.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'MK',
+      label: 'Severna Makedonija',
+      labelCyr: 'Северна Македонија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Severnoj Makedoniji',
+      embassyCyr: 'Амбасада Србије у Северној Македонији',
+      email: 'srbamb@unet.com.mk',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SL',
+      label: 'Sijera Leone',
+      labelCyr: 'Сијера Леоне',
+    }, [
+    {
+      embassy: 'Misija u UN - Njujork',
+      embassyCyr: 'Мисија у УН - Њујорк',
+      email: 'info@serbiamissionun.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SG',
+      label: 'Singapur',
+      labelCyr: 'Сингапур',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Indoneziji',
+      embassyCyr: 'Амбасада Србије у Индонезији',
+      email: 'embjakarta@serbian-embassy.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SY',
+      label: 'Sirija',
+      labelCyr: 'Сирија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Siriji',
+      embassyCyr: 'Амбасада Србије у Сирији',
+      email: 'ambasada@srbija-damask.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SK',
+      label: 'Slovačka',
+      labelCyr: 'Словачка',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Slovačkoj',
+      embassyCyr: 'Амбасада Србије у Словачкој',
+      email: 'embassy.bratislava@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SI',
+      label: 'Slovenija',
+      labelCyr: 'Словенија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Sloveniji',
+      embassyCyr: 'Амбасада Србије у Словенији',
+      email: 'embassy.ljubljana@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SO',
+      label: 'Somalija',
+      labelCyr: 'Сомалија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Keniji',
+      embassyCyr: 'Амбасада Србије у Кенији',
+      email: 'nairobi@embassyofserbia.or.ke',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'ES',
+      label: 'Španija',
+      labelCyr: 'Шпанија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Španiji',
+      embassyCyr: 'Амбасада Србије у Шпанији',
+      email: 'konz.madrid@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'LK',
+      label: 'Šri Lanka',
+      labelCyr: 'Шри Ланка',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Indiji',
+      embassyCyr: 'Амбасада Србије у Индији',
+      email: 'embassyofserbiadelhi@hotmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SD',
+      label: 'Sudan',
+      labelCyr: 'Судан',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Egiptu',
+      embassyCyr: 'Амбасада Србије у Египту',
+      email: 'konzul@serbiaeg.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SR',
+      label: 'Surinam',
+      labelCyr: 'Суринам',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
+      embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
+      email: 'consular@serbiaembusa.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'CH',
+      label: 'Švajcarska',
+      labelCyr: 'Швајцарска',
+    }, [
+    {
+      embassy: 'Konzulat Srbije u Švajcarskoj, Cirih',
+      embassyCyr: 'Конзулат Србије у Швајцарској, Цирих',
+      email: 'info@konzulat.ch',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SZ',
+      label: 'Svazilend',
+      labelCyr: 'Свазиленд',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
+      embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
+      email: 'info@srbembassy.org.za',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'SE',
+      label: 'Švedska',
+      labelCyr: 'Шведска',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Švedskoj',
+      embassyCyr: 'Амбасада Србије у Шведској',
+      email: 'serbiaemb@telia.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'LC',
+      label: 'Sveta Lucija',
+      labelCyr: 'Света Луција',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
+      embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
+      email: 'consular@serbiaembusa.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TJ',
+      label: 'Tadžikistan',
+      labelCyr: 'Таџикистан',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Etiopiji',
+      embassyCyr: 'Амбасада Србије у Етиопији',
+      email: 'serbambadis@yahoo.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TH',
+      label: 'Tajland',
+      labelCyr: 'Тајланд',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Indoneziji',
+      embassyCyr: 'Амбасада Србије у Индонезији',
+      email: 'embjakarta@serbian-embassy.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TZ',
+      label: 'Tanzanija',
+      labelCyr: 'Танзанија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Etiopiji',
+      embassyCyr: 'Амбасада Србије у Етиопији',
+      email: 'serbambadis@yahoo.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TG',
+      label: 'Togo',
+      labelCyr: 'Того',
+    }, [
+    {
+      embassy: 'Misija u UN - Njujork',
+      embassyCyr: 'Мисија у УН - Њујорк',
+      email: 'info@serbiamissionun.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TO',
+      label: 'Tonga',
+      labelCyr: 'Тонга',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Australiji, Kanbera',
+      embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
+      email: 'embassy.canberra@serbia.org.au',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TT',
+      label: 'Trinidad i Tobago',
+      labelCyr: 'Тринидад и Тобаго',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
+      embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
+      email: 'consular@serbiaembusa.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TN',
+      label: 'Tunis',
+      labelCyr: 'Тунис',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Tunisu',
+      embassyCyr: 'Амбасада Србије у Тунису',
+      email: 'amb.serbia@gnet.tn',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TM',
+      label: 'Turkmenistan',
+      labelCyr: 'Туркменистан',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Rusiji, Moskva',
+      embassyCyr: 'Амбасада Србије у Русији, Москва',
+      email: 'konzularno.moskva@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'TR',
+      label: 'Turska',
+      labelCyr: 'Турска',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Turskoj, Ankara',
+      embassyCyr: 'Амбасада Србије у Турској, Анкара',
+      email: 'embserank@gmail.com',
+    },
+    {
+      embassy: 'Konzulat Srbije u Turskoj, Istanbul',
+      embassyCyr: 'Конзулат Србије у Турској, Истанбул',
+      email: 'konzulat.istanbul@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'UG',
+      label: 'Uganda',
+      labelCyr: 'Уганда',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Keniji',
+      embassyCyr: 'Амбасада Србије у Кенији',
+      email: 'nairobi@embassyofserbia.or.ke',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'AE',
+      label: 'Ujedinjeni Arapski Emirati',
+      labelCyr: 'Уједињени Арапски Емирати',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Ujedinjenim Arapskim Emiratima',
+      embassyCyr: 'Амбасада Србије у Уједињеним Арапским Емиратима',
+      email: 'embassy.abudhabi@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'UA',
+      label: 'Ukrajina',
+      labelCyr: 'Украјина',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Ukrajini',
+      embassyCyr: 'Амбасада Србије у Украјини',
+      email: 'konzrs@ukr.net',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'UY',
+      label: 'Urugvaj',
+      labelCyr: 'Уругвај',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Argentini',
+      embassyCyr: 'Амбасада Србије у Аргентини',
+      email: 'consulado@serbembaires.com.ar',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'UZ',
+      label: 'Uzbekistan',
+      labelCyr: 'Узбекистан',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Rusiji, Moskva',
+      embassyCyr: 'Амбасада Србије у Русији, Москва',
+      email: 'konzularno.moskva@mfa.rs',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'VU',
+      label: 'Vanuatu',
+      labelCyr: 'Вануату',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Australiji, Kanbera',
+      embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
+      email: 'embassy.canberra@serbia.org.au',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'VA',
+      label: 'Vatikan',
+      labelCyr: 'Ватикан',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Vatikanu',
+      embassyCyr: 'Амбасада Србије у Ватикану',
+      email: 'amb.serbia.vatican@ambroma.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'GB',
+      label: 'Velika Britanija',
+      labelCyr: 'Велика Британија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Velikoj Britaniji',
+      embassyCyr: 'Амбасада Србије у Великој Британији',
+      email: 'izbori2020@serbianembassy.org.uk',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'VE',
+      label: 'Venecuela',
+      labelCyr: 'Венецуела',
+    }, [
+    {
+      embassy: 'Ambasada Srbije na Kubi',
+      embassyCyr: 'Амбасада Србије на Куби',
+      email: 'konzsrbhav@gmail.com',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'VN',
+      label: 'Vijetnam',
+      labelCyr: 'Вијетнам',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Indoneziji',
+      embassyCyr: 'Амбасада Србије у Индонезији',
+      email: 'embjakarta@serbian-embassy.org',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'ZM',
+      label: 'Zambija',
+      labelCyr: 'Замбија',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Zambiji',
+      embassyCyr: 'Амбасада Србије у Замбији',
+      email: 'serbia.lusaka@iconnect.zm',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'CV',
+      label: 'Zelenortska ostrva',
+      labelCyr: 'Зеленортска острва',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
+      embassyCyr: 'Амбасада Србије у Јужноафричкој Републици',
+      email: 'info@srbembassy.org.za',
+    },
+  ],
+  ],
+  [
+    {
+      countryCode: 'ZW',
+      label: 'Zimbabve',
+      labelCyr: 'Зимбабве',
+    }, [
+    {
+      embassy: 'Ambasada Srbije u Portugalu',
+      embassyCyr: 'Амбасада Србије у Португалу',
+      email: 'serviaemba@netcabo.pt',
+    },
+  ],
+  ],
 ]);
-
-export const POLLING_STATIONS: PollingStation[] = [
-  {
-    label: 'Afganistan (pokriva Ambasada Srbije u Indiji)',
-    labelCyr: 'Авганистан (покрива Амбасада Србије у Индији)',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Albanija',
-    labelCyr: 'Албанија',
-    embassy: 'Ambasada Srbije u Albaniji',
-    embassyCyr: 'Амбасада Србије у Албанији',
-    email: 'ambatira@icc-al.org',
-  }, {
-    label: 'Alžir',
-    labelCyr: 'Алжир',
-    embassy: 'Ambasada Srbije u Alžiru',
-    embassyCyr: 'Амбасада Србије у Алжиру',
-    email: 'ambasada@ambserbie-alger.com',
-  }, {
-    label: 'Ambasada Srbije u Australiji, Kanbera',
-    labelCyr: 'Амбасада Србије у Аустралији, Канбера',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'Ambasada Srbije u Nemačkoj, Berlin',
-    labelCyr: 'Амбасада Србије у Немачкој, Берлин',
-    embassy: 'Ambasada Srbije u Nemačkoj, Berlin',
-    embassyCyr: 'Амбасада Србије у Немачкој, Берлин',
-    email: 'info@botschaft-serbien.de',
-  }, {
-    label: 'Ambasada Srbije u Švajcarskoj, Bern',
-    labelCyr: 'Амбасада Србије у Швајцарској, Берн',
-    embassy: 'Ambasada Srbije u Švajcarskoj, Bern',
-    embassyCyr: 'Амбасада Србије у Швајцарској, Берн',
-    email: 'info@ambasadasrbije.ch',
-  }, {
-    label: 'Andora (pokriva Ambasada Srbije u Španiji)',
-    labelCyr: 'Андора (покрива Амбасада Србије у Шпанији)',
-    embassy: 'Ambasada Srbije u Španiji',
-    embassyCyr: 'Амбасада Србије у Шпанији',
-    email: 'konz.madrid@mfa.rs',
-  }, {
-    label: 'Angola',
-    labelCyr: 'Ангола',
-    embassy: 'Ambasada Srbije u Angoli',
-    embassyCyr: 'Амбасада Србије у Анголи',
-    email: 'serbiaemb@netcabo.co.ao',
-  }, {
-    label: 'Antigva i Barbuda (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Антигва и Барбуда (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Argentina',
-    labelCyr: 'Аргентина',
-    embassy: 'Ambasada Srbije u Argentini',
-    embassyCyr: 'Амбасада Србије у Аргентини',
-    email: 'consulado@serbembaires.com.ar',
-  }, {
-    label: 'Australija, Sidnej (konzulat)',
-    labelCyr: 'Аустралија, Сиднеј (конзулат)',
-    embassy: 'Konzulat Srbije u Australiji, Sidnej',
-    embassyCyr: 'Конзулат Србије у Аустралији, Сиднеј',
-    email: 'gkrssid@optusnet.com.au',
-  }, {
-    label: 'Austrija, Beč',
-    labelCyr: 'Аустрија, Беч',
-    embassy: 'Ambasada Srbije u Austriji, Beč',
-    embassyCyr: 'Амбасада Србије у Аустрији, Беч',
-    email: 'consulate.vienna@mfa.rs',
-  }, {
-    label: 'Austrija, Salcburg (konzulat)',
-    labelCyr: 'Аустрија, Салцбург (конзулат)',
-    embassy: 'Konzulat Srbije u Austriji, Salcburg',
-    embassyCyr: 'Конзулат Србије у Аустрији, Салцбург',
-    email: 'genconsulate.salzburg@mfa.rs',
-  }, {
-    label: 'Azerbejdžan',
-    labelCyr: 'Азербејџан',
-    embassy: 'Ambasada Srbije u Azerbejdžanu',
-    embassyCyr: 'Амбасада Србије у Азербејџану',
-    email: 'serbianembassy.baku@azeurotel.com',
-  }, {
-    label: 'Bahami (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Бахами (покрива Амбасада Србије у Сједињеним Америчким Државама, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Bahrein (pokriva Ambasada Srbije u Kuvajtu)',
-    labelCyr: 'Бахреин (покрива Амбасада Србије у Кувајту)',
-    embassy: 'Ambasada Srbije u Kuvajtu',
-    embassyCyr: 'Амбасада Србије у Кувајту',
-    email: 'serbkonzkw@gmail.com',
-  }, {
-    label: 'Bangladeš (pokriva Ambasada Srbije u Indiji)',
-    labelCyr: 'Бангладеш (покрива Амбасада Србије у Индији)',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Barbados (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Барбадос (покрива Амбасада Србије у Сједињеним Америчким Државама, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Belgija',
-    labelCyr: 'Белгија',
-    embassy: 'Ambasada Srbije u Belgiji',
-    embassyCyr: 'Амбасада Србије у Белгији',
-    email: 'embassy.brussels@mfa.rs',
-  }, {
-    label: 'Belize (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Белизе (покрива Амбасада Србије у Сједињеним Америчким Државама, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Belorusija',
-    labelCyr: 'Белорусија',
-    embassy: 'Ambasada Srbije u Belorusiji',
-    embassyCyr: 'Амбасада Србије у Белорусији',
-    email: 'embassy.minsk@mfa.rs',
-  }, {
-    label: 'Benin (pokriva UN - Njujork)',
-    labelCyr: 'Бенин (покрива Мисија у УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Bocvana (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Боцвана (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Bolivija (pokriva Ambasada Srbije u Brazilu)',
-    labelCyr: 'Боливија (покрива Амбасада Србије у Бразилу)',
-    embassy: 'Ambasada Srbije u Brazilu',
-    embassyCyr: 'Амбасада Србије у Бразилу',
-    email: 'embaixadaservia@terra.com.br',
-  }, {
-    label: 'Bosna i Hercegovina, Banja Luka (konzulat)',
-    labelCyr: 'Босна и Херцеговина, Бања Лука (конзулат)',
-    embassy: 'Konzulat Srbije u Bosni i Hercegovini, Banja Luka',
-    embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Бања Лука',
-    email: 'konzulat.bl@mfa.rs',
-  }, {
-    label: 'Bosna i Hercegovina, Drvar (konzulat)',
-    labelCyr: 'Босна и Херцеговина, Дрвар (конзулат)',
-    embassy: 'Konzulat Srbije u Bosni i Hercegovini, Drvar',
-    embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Дрвар',
-    email: 'kk.rs-drvar@ktsara.net',
-  }, {
-    label: 'Bosna i Hercegovina, Mostar (konzulat)',
-    labelCyr: 'Босна и Херцеговина, Мостар (конзулат)',
-    embassy: 'Konzulat Srbije u Bosni i Hercegovini, Mostar',
-    embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Мостар',
-    email: 'gk.mostar@mfa.rs',
-  }, {
-    label: 'Bosna i Hercegovina, Trebinje (konzulat)',
-    labelCyr: 'Босна и Херцеговина, Требиње (конзулат)',
-    embassy: 'Konzulat Srbije u Bosni i Hercegovini, Trebinje',
-    embassyCyr: 'Конзулат Србије у Босни и Херцеговини, Требиње',
-    email: 'kk.trebinje@mfa.rs',
-  }, {
-    label: 'Bosni i Hercegovina, Sarajevo',
-    labelCyr: 'Босна и Херцеговина, Сарајево',
-    embassy: 'Ambasada Srbije u Bosni i Hercegovini, Sarajevo',
-    embassyCyr: 'Амбасада Србије у Босни и Херцеговини, Сарајево',
-    email: 'srbamba@bih.net.ba',
-  }, {
-    label: 'Brazil',
-    labelCyr: 'Бразил',
-    embassy: 'Ambasada Srbije u Brazilu',
-    embassyCyr: 'Амбасада Србије у Бразилу',
-    email: 'embaixadaservia@terra.com.br',
-  }, {
-    label: 'Brunej Darusalam (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Брунеј Дарусалам (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Bugarska',
-    labelCyr: 'Бугарска',
-    embassy: 'Ambasada Srbije u Bugarskoj',
-    embassyCyr: 'Амбасада Србије у Бугарској',
-    email: 'sofia@emb-serbia.com',
-  }, {
-    label: 'Burkina Faso (pokriva UN - Njujork)',
-    labelCyr: 'Буркина Фасо (покрива УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Burundi (pokriva Ambasada Srbije u Keniji)',
-    labelCyr: 'Бурунди, (покрива амбасада Србије у Кенији)',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Butan (pokriva Ambasada Srbije u Indiji)',
-    labelCyr: 'Бутан (покрива Амбасада Србије у Индији)',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Čad (pokriva Ambasada Srbije u Libiji)',
-    labelCyr: 'Чад (покривен либијске амбасаде Србије)',
-    embassy: 'Ambasada Srbije u Libiji',
-    embassyCyr: 'Амбасада Србије у Либији',
-    email: 'serbianembassy_tripoli@yahoo.com',
-  }, {
-    label: 'Centralnoafrička Republika (pokriva UN - Njujork)',
-    labelCyr: 'Централна Афричка Република (покривен од стране УН - Нев Иорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Češka Republika',
-    labelCyr: 'Чешка',
-    embassy: 'Ambasada Srbije u Češkoj Republici',
-    embassyCyr: 'Амбасада Србије у Чешкој Републици',
-    email: 'konzularno.prag@mfa.rs',
-  }, {
-    label: 'Čile (pokriva Ambasada Srbije u Argentini)',
-    labelCyr: 'Чиле (покрива Амбасада Србије у Аргентини)',
-    embassy: 'Ambasada Srbije u Argentini',
-    embassyCyr: 'Амбасада Србије у Аргентини',
-    email: 'consulado@serbembaires.com.ar',
-  }, {
-    label: 'Crna Gora, Herceg Novi (konzulat)',
-    labelCyr: 'Црна Гора, Херцег Нови (конзулат)',
-    embassy: 'Konzulat Srbije u Crnoj Gori, Herceg Novi',
-    embassyCyr: 'Конзулат Србије у Црној Гори, Херцег Нови',
-    email: 'gkh.novi@mfa.rs',
-  }, {
-    label: 'Crna Gora, Podgorica',
-    labelCyr: 'Црна Гора, Подгорица',
-    embassy: 'Ambasada Srbije u Crnoj Gori, Podgorica',
-    embassyCyr: 'Амбасада Србије у Црној Гори, Подгорица',
-    email: 'embassy.podgorica@mfa.rs',
-  }, {
-    label: 'Danska',
-    labelCyr: 'Данска',
-    embassy: 'Ambasada Srbije u Danskoj',
-    embassyCyr: 'Амбасада Србије у Данској',
-    email: 'serbianemb@city.dk',
-  }, {
-    label: 'Dominikana (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Доминикана (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Dominikanska Republika (pokriva Ambasada Srbije na Kubi)',
-    labelCyr: 'Доминиканска Република (покрива Амбасада Србије на Куби)',
-    embassy: 'Ambasada Srbije na Kubi',
-    embassyCyr: 'Амбасада Србије на Куби',
-    email: 'konzsrbhav@gmail.com',
-  }, {
-    label: 'Džibuti (pokriva Ambasada Srbije u Etiopiji)',
-    labelCyr: 'Џибути (покрива Амбасада Србије у Етиопији)',
-    embassy: 'Ambasada Srbije u Etiopiji',
-    embassyCyr: 'Амбасада Србије у Етиопији',
-    email: 'serbambadis@yahoo.com',
-  }, {
-    label: 'Egipat',
-    labelCyr: 'Египат',
-    embassy: 'Ambasada Srbije u Egiptu',
-    embassyCyr: 'Амбасада Србије у Египту',
-    email: 'konzul@serbiaeg.com',
-  }, {
-    label: 'Ekvador (pokriva Ambasada Srbije u Brazilu)',
-    labelCyr: 'Еквадор (покрива Амбасада Србије у Бразилу)',
-    embassy: 'Ambasada Srbije u Brazilu',
-    embassyCyr: 'Амбасада Србије у Бразилу',
-    email: 'embaixadaservia@terra.com.br',
-  }, {
-    label: 'Ekvatorijalna Gvineja (pokriva Ambasada Srbije u Angoli)',
-    labelCyr: 'Гвинеја (покрива Амбасада Србије у Анголи)',
-    embassy: 'Ambasada Srbije u Angoli',
-    embassyCyr: 'Амбасада Србије у Анголи',
-    email: 'serbiaemb@netcabo.co.ao',
-  }, {
-    label: 'Eritreja (pokriva Ambasada Srbije u Keniji)',
-    labelCyr: 'Еритреја (покрива Амбасада Србије у Кенији)',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Estonija (pokriva Ambasada Srbije u Finskoj)',
-    labelCyr: 'Естонија (покрива Амбасада Србије у Финској)',
-    embassy: 'Ambasada Srbije u Finskoj',
-    embassyCyr: 'Амбасада Србије у Финској',
-    email: 'serbia@kolumbus.fi',
-  }, {
-    label: 'Etiopija',
-    labelCyr: 'Етиопија',
-    embassy: 'Ambasada Srbije u Etiopiji',
-    embassyCyr: 'Амбасада Србије у Етиопији',
-    email: 'serbambadis@yahoo.com',
-  }, {
-    label: 'Fidži (pokriva Ambasada Srbije u Australiji, Kanbera)',
-    labelCyr: 'Фиџи (покрива Амбасада Србије у Аустралији, Канбера)',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'Filipini (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Филипини (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Finska',
-    labelCyr: 'Финска',
-    embassy: 'Ambasada Srbije u Finskoj',
-    embassyCyr: 'Амбасада Србије у Финској',
-    email: 'serbia@kolumbus.fi',
-  }, {
-    label: 'Francuska, Pariz',
-    labelCyr: 'Француска, Париз',
-    embassy: 'Ambasada Srbije u Francuskoj, Pariz',
-    embassyCyr: 'Амбасада Србије у Француској, Париз',
-    email: 'konzularno.pariz@mfa.rs',
-  }, {
-    label: 'Francuska, Strazbur (konzulat)',
-    labelCyr: 'Француска, Стразбур (конзулат)',
-    embassy: 'Konzulat Srbije u Francuskoj, Strazbur',
-    embassyCyr: 'Конзулат Србије у Француској, Стразбур',
-    email: 'consulate.strasbourg@mfa.rs',
-  }, {
-    label: 'Gabon (pokriva Ambasada Srbije u Angoli)',
-    labelCyr: 'Габон (покрива Амбасада Србије у Анголи)',
-    embassy: 'Ambasada Srbije u Angoli',
-    embassyCyr: 'Амбасада Србије у Анголи',
-    email: 'serbiaemb@netcabo.co.ao',
-  }, {
-    label: 'Gambija (pokriva UN - Njujork)',
-    labelCyr: 'Гамбија (покривен од стране УН - Нев Иорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Gana (pokriva Ambasada Srbije u Nigeriji)',
-    labelCyr: 'Гана (покрива Амбасада Србије у Нигерији)',
-    embassy: 'Ambasada Srbije u Nigeriji',
-    embassyCyr: 'Амбасада Србије у Нигерији',
-    email: 'serbconsabuja@gmail.com',
-  }, {
-    label: 'Grčka, Atina',
-    labelCyr: 'Грчка, Атина',
-    embassy: 'Ambasada Srbije u Grčkoj, Atina',
-    embassyCyr: 'Амбасада Србије у Грчкој, Атина',
-    email: 'embassy.athens.consular@mfa.rs',
-  }, {
-    label: 'Grčka, Solun (konzulat)',
-    labelCyr: 'Грчка, Солун (конзулат)',
-    embassy: 'Konzulat Srbije u Grčkoj, Solun',
-    embassyCyr: 'Конзулат Србије у Грчкој, Солун',
-    email: 'srbcons@otenet.gr',
-  }, {
-    label: 'Grenada (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Гренада (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Gruzija (pokriva Ambasada Srbije u Ukrajini)',
-    labelCyr: 'Грузија (покрива Амбасада Србије у Украјини)',
-    embassy: 'Ambasada Srbije u Ukrajini',
-    embassyCyr: 'Амбасада Србије у Украјини',
-    email: 'konzrs@ukr.net',
-  }, {
-    label: 'Gvajana (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Гвајана (покрива Амбасада Србије у Сједињеним Америчким Државама, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Gvatemala (pokriva Ambasada Srbije u Meksiku)',
-    labelCyr: 'Гватемала (покрива Амбасада Србије у Мексику)',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Gvineja (pokriva Ambasada Srbije u Alžiru)',
-    labelCyr: 'Гвинеја (покрива Амбасада Србије у Алжиру)',
-    embassy: 'Ambasada Srbije u Alžiru',
-    embassyCyr: 'Амбасада Србије у Алжиру',
-    email: 'ambasada@ambserbie-alger.com',
-  }, {
-    label: 'Gvineja Bisao (pokriva Ambasada Srbije u Alžiru)',
-    labelCyr: 'Гвинеја Бисао (покрива Амбасада Србије у Алжиру)',
-    embassy: 'Ambasada Srbije u Alžiru',
-    embassyCyr: 'Амбасада Србије у Алжиру',
-    email: 'ambasada@ambserbie-alger.com',
-  }, {
-    label: 'Haiti (pokriva Ambasada Srbije na Kubi)',
-    labelCyr: 'Хаити (покрива Амбасада Србије на Куби)',
-    embassy: 'Ambasada Srbije na Kubi',
-    embassyCyr: 'Амбасада Србије на Куби',
-    email: 'konzsrbhav@gmail.com',
-  }, {
-    label: 'Holandija/Nizozemska',
-    labelCyr: 'Холандија/Низоземска',
-    embassy: 'Ambasada Srbije u Holandiji',
-    embassyCyr: 'Амбасада Србије у Холандији',
-    email: 'embassy.hague@mfa.rs',
-  }, {
-    label: 'Honduras (pokriva Ambasada Srbije u Meksiku)',
-    labelCyr: 'Хондурас (покрива Амбасада Србије у Мексику)',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Hrvatska, Rijeka (konzulat)',
-    labelCyr: 'Хрватска, Ријека (конзулат)',
-    embassy: 'Konzulat Srbije u Hrvatskoj, Rijeka',
-    embassyCyr: 'Конзулат Србије у Хрватској, Ријека',
-    email: 'konzulat-rijeka@ri.t-com.hr',
-  }, {
-    label: 'Hrvatska, Vukovar (konzulat)',
-    labelCyr: 'Хрватска, Вуковар (конзулат)',
-    embassy: 'Konzulat Srbije u Hrvatskoj, Vukovar',
-    embassyCyr: 'Конзулат Србије у Хрватској, Вуковар',
-    email: 'generalni.konzulat@gk-srbije-vukovar.hr',
-  }, {
-    label: 'Hrvatska, Zagreb',
-    labelCyr: 'Хрватска, Загреб',
-    embassy: 'Ambasada Srbije u Hrvatskoj, Zagreb',
-    embassyCyr: 'Амбасада Србије у Хрватској, Загреб',
-    email: 'embassy.zagreb@mfa.rs',
-  }, {
-    label: 'Indija',
-    labelCyr: 'Индија',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Indonezija',
-    labelCyr: 'Индонезија',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Irak',
-    labelCyr: 'Ирак',
-    embassy: 'Ambasada Srbije u Iraku',
-    embassyCyr: 'Амбасада Србије у Ираку',
-    email: 'embsrbag@yahoo.com',
-  }, {
-    label: 'Iran',
-    labelCyr: 'Иран',
-    embassy: 'Ambasada Srbije u Iranu',
-    embassyCyr: 'Амбасада Србије у Ирану',
-    email: 'serbembteh@neda.net',
-  }, {
-    label: 'Irska (pokriva Ambasada Srbije u Velikoj Britaniji)',
-    labelCyr: 'Ирска (покрива Амбасада Србије у Великој Британији)',
-    embassy: 'Ambasada Srbije u Velikoj Britaniji',
-    embassyCyr: 'Амбасада Србије у Великој Британији',
-    email: 'izbori2020@serbianembassy.org.uk',
-  }, {
-    label: 'Island (preko Ambasada Srbije u Norveškoj)',
-    labelCyr: 'Исланд (преко Амбасада Србије у Норвешкој)',
-    embassy: 'Ambasada Srbije u Norveškoj',
-    embassyCyr: 'Амбасада Србије у Норвешкој',
-    email: 'ambasada@serbianembassy.no',
-  }, {
-    label: 'Istočni Timor (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Источни Тимор (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Italija, Milano (konzulat)',
-    labelCyr: 'Италија, Милано (конзулат)',
-    embassy: 'Konzulat Srbije u Italiji, Milano',
-    embassyCyr: 'Конзулат Србије у Италији, Милано',
-    email: 'info@gkrsmi.it',
-  }, {
-    label: 'Italija, Rim',
-    labelCyr: 'Италија, Рим',
-    embassy: 'Ambasada Srbije u Italiji, Rim',
-    embassyCyr: 'Амбасада Србије у Италији, Рим',
-    email: 'ljubomir.merdovic@mfa.rs',
-  }, {
-    label: 'Italija, Trst (konzulat)',
-    labelCyr: 'Италија, Трст (конзулат)',
-    embassy: 'Konzulat Srbije u Italiji, Trst',
-    embassyCyr: 'Конзулат Србије у Италији, Трст',
-    email: 'gkrstrst@spin.it',
-  }, {
-    label: 'Izrael',
-    labelCyr: 'Израел',
-    embassy: 'Ambasada Srbije u Izraelu',
-    embassyCyr: 'Амбасада Србије у Израелу',
-    email: 'srbambil@netvision.net.il',
-  }, {
-    label: 'Jamajka (pokriva Ambasada Srbije na Kubi)',
-    labelCyr: 'Јамајка (покрива Амбасада Србије на Куби)',
-    embassy: 'Ambasada Srbije na Kubi',
-    embassyCyr: 'Амбасада Србије на Куби',
-    email: 'konzsrbhav@gmail.com',
-  }, {
-    label: 'Japan',
-    labelCyr: 'Јапан',
-    embassy: 'Ambasada Srbije u Japanu',
-    embassyCyr: 'Амбасада Србије у Јапану',
-    email: 'embassy.tokyo@mfa.rs',
-  }, {
-    label: 'Jemen (pokriva Ambasada Srbije u Kuvajtu)',
-    labelCyr: 'Јемен (покрива Амбасада Србије у Кувајту)',
-    embassy: 'Ambasada Srbije u Kuvajtu',
-    embassyCyr: 'Амбасада Србије у Кувајту',
-    email: 'serbkonzkw@gmail.com',
-  }, {
-    label: 'Jermenija (pokriva Ambasada Srbije u Grčkoj, Atina)',
-    labelCyr: 'Јерменија (покрива Амбасада Србије у Грчкој, Атина)',
-    embassy: 'Ambasada Srbije u Grčkoj, Atina',
-    embassyCyr: 'Амбасада Србије у Грчкој, Атина',
-    email: 'embassy.athens.consular@mfa.rs',
-  }, {
-    label: 'Jordan (pokriva Ambasada Srbije u Libanu)',
-    labelCyr: 'Јордан (покрива Амбасада Србије у Либану)',
-    embassy: 'Ambasada Srbije u Libanu',
-    embassyCyr: 'Амбасада Србије у Либану',
-    email: 'embassy@serbia-beirut.rs',
-  }, {
-    label: 'Južna Koreja, Republika',
-    labelCyr: 'Јужна Кореја, Република',
-    embassy: 'Ambasada Srbije u Koreji, Republika',
-    embassyCyr: 'Амбасада Србије у Кореји, Република',
-    email: 'embserbseul@yahoo.com',
-  }, {
-    label: 'Južnoafrička Republika',
-    labelCyr: 'Република, Јужна',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Kambodža (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Камбоџа (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Kamerun (pokriva UN - Njujork)',
-    labelCyr: 'Камерун (покрива УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Kanada, Otava',
-    labelCyr: 'Канада, Отава',
-    embassy: 'Ambasada Srbije u Kanadi, Otava',
-    embassyCyr: 'Амбасада Србије у Канади, Отава',
-    email: 'diplomat@serbianembassy.ca',
-  }, {
-    label: 'Kanada, Toronto (konzulat)',
-    labelCyr: 'Канада, Торонто (конзулат)',
-    embassy: 'Konzulat Srbije u Kanadi, Toronto',
-    embassyCyr: 'Конзулат Србије у Канади, Торонто',
-    email: 'gkrstoronto@rogers.com',
-  }, {
-    label: 'Katar',
-    labelCyr: 'Катар',
-    embassy: 'Ambasada Srbije u Kataru',
-    embassyCyr: 'Амбасада Србије у Катару',
-    email: 'embsrbqat@gmail.com',
-  }, {
-    label: 'Kazahstan',
-    labelCyr: 'Казахстан',
-    embassy: 'Ambasada Srbije u Kazahstanu',
-    embassyCyr: 'Амбасада Србије у Казахстану',
-    email: 'amb.astana@mail.ru',
-  }, {
-    label: 'Kenija',
-    labelCyr: 'Кенија',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Kina, Narodna Republika, Peking',
-    labelCyr: 'Кина, Народна Република, Пекинг',
-    embassy: 'Ambasada Srbije u Kini, Narodna Republika, Peking',
-    embassyCyr: 'Амбасада Србије у Кини, Народна Република, Пекинг',
-    email: 'embserbia@embserbia.cn',
-  }, {
-    label: 'Kina, Narodna Republika, Šangaj (konzulat)',
-    labelCyr: 'Кина, Народна Република, Шангај (конзулат)',
-    embassy: 'Konzulat Srbije u Kini, Narodna Republika, Šangaj',
-    embassyCyr: 'Конзулат Србије у Кини, Народна Република, Шангај',
-    email: 'consulate@srbshanghai.org',
-  }, {
-    label: 'Kipar',
-    labelCyr: 'Кипар',
-    embassy: 'Ambasada Srbije na Kipru',
-    embassyCyr: 'Амбасада Србије на Кипру',
-    email: 'nicosia@serbia.org.cy',
-  }, {
-    label: 'Kirgistan (pokriva Ambasada Srbije u Rusiji)',
-    labelCyr: 'Киргистан (покрива Амбасада Србије у Русији)',
-    embassy: 'Ambasada Srbije u Rusiji',
-    embassyCyr: 'Амбасада Србије у Русији',
-    email: 'konzularno.moskva@mfa.rs',
-  }, {
-    label: 'Kolumbija (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Колумбија (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Вашингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Komori (pokriva Ambasada Srbije u Keniji)',
-    labelCyr: 'Комори (покрива Амбасада Србије у Кенији)',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Kongo, Demokratska Republika',
-    labelCyr: 'Конго Демократска Република',
-    embassy: 'Ambasada Srbije u Kongu, DR',
-    embassyCyr: 'Амбасада Србије у Конгу, ДР',
-    email: 'serbambakin@gmail.com',
-  }, {
-    label: 'Kongo (pokriva Ambasada Srbije u Angoli)',
-    labelCyr: 'Конго (покрива Амбасада Србије у Анголи)',
-    embassy: 'Ambasada Srbije u Angoli',
-    embassyCyr: 'Амбасада Србије у Анголи',
-    email: 'serbiaemb@netcabo.co.ao',
-  }, {
-    label: 'Koreja, DNR (pokriva Ambasada Srbije u Kini, Narodna Republika, Peking)',
-    labelCyr: 'Кореја, ДНР (покрива Амбасада Србије у Кини, Народна Република, Пекинг)',
-    embassy: 'Ambasada Srbije u Kini, Narodna Republika, Peking',
-    embassyCyr: 'Амбасада Србије у Кини, Народна Република, Пекинг',
-    email: 'embserbia@embserbia.cn',
-  }, {
-    label: 'Kostarika (pokriva Ambasada Srbije u Meksiku)',
-    labelCyr: 'Костарика (покрива амбасада Србије у Мексику)',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Kuba',
-    labelCyr: 'Куба',
-    embassy: 'Ambasada Srbije na Kubi',
-    embassyCyr: 'Амбасада Србије на Куби',
-    email: 'konzsrbhav@gmail.com',
-  }, {
-    label: 'Kuvajt',
-    labelCyr: 'Кувајт',
-    embassy: 'Ambasada Srbije u Kuvajtu',
-    embassyCyr: 'Амбасада Србије у Кувајту',
-    email: 'serbkonzkw@gmail.com',
-  }, {
-    label: 'Laos (pokriva Ambasada Srbije u Mjanmaru)',
-    labelCyr: 'Лаос (покрива Амбасада Србије у Мјанмару)',
-    embassy: 'Ambasada Srbije u Mjanmaru',
-    embassyCyr: 'Амбасада Србије у Мјанмару',
-    email: 'serbemb@yangon.net.mm',
-  }, {
-    label: 'Lesoto (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Лесото (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Letonija (pokriva Ambasada Srbije u Švedskoj)',
-    labelCyr: 'Летонија (покрива Амбасада Србије у Шведској)',
-    embassy: 'Ambasada Srbije u Švedskoj',
-    embassyCyr: 'Амбасада Србије у Шведској',
-    email: 'serbiaemb@telia.com',
-  }, {
-    label: 'Liban',
-    labelCyr: 'Либан',
-    embassy: 'Ambasada Srbije u Libanu',
-    embassyCyr: 'Амбасада Србије у Либану',
-    email: 'embassy@serbia-beirut.rs',
-  }, {
-    label: 'Liberija (pokriva UN - Njujork)',
-    labelCyr: 'Либерија (покрива Мисија у УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Libija',
-    labelCyr: 'Либија',
-    embassy: 'Ambasada Srbije u Libiji',
-    embassyCyr: 'Амбасада Србије у Либији',
-    email: 'serbianembassy_tripoli@yahoo.com',
-  }, {
-    label: 'Lihtenštajn (pokriva Ambasada Srbije u Švajcarskoj, Bern)',
-    labelCyr: 'Лихтенштајн (покрива Амбасада Србије у Швајцарској, Берн)',
-    embassy: 'Ambasada Srbije u Švajcarskoj, Bern',
-    embassyCyr: 'Амбасада Србије у Швајцарској, Берн',
-    email: 'info@ambasadasrbije.ch',
-  }, {
-    label: 'Litvanija (pokriva Ambasada Srbije u Poljskoj)',
-    labelCyr: 'Литванија (покрива Амбасада Србије у Пољској)',
-    embassy: 'Ambasada Srbije u Poljskoj',
-    embassyCyr: 'Амбасада Србије у Пољској',
-    email: 'embassy.warsaw@mfa.rs',
-  }, {
-    label: 'Luksemburg (pokriva Ambasada Srbije u Belgiji)',
-    labelCyr: 'Луксембург (покрива Амбасада Србије у Белгији)',
-    embassy: 'Ambasada Srbije u Belgiji',
-    embassyCyr: 'Амбасада Србије у Белгији',
-    email: 'embassy.brussels@mfa.rs',
-  }, {
-    label: 'Madagaskar (pokriva UN - Njujork)',
-    labelCyr: 'Мадагаскар (покрива УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Mađarska',
-    labelCyr: 'Мађарска',
-    embassy: 'Ambasada Srbije u Mađarskoj',
-    embassyCyr: 'Амбасада Србије у Мађарској',
-    email: 'budapest-consulat@serbiaemb.t-online.hu',
-  }, {
-    label: 'Malavi (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Малави (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Maldivi (pokriva Ambasada Srbije u Indiji)',
-    labelCyr: 'Малдиви (покрива Амбасада Србије у Индији)',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Malezija (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Малезија (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Mali (pokriva Ambasada Srbije u Alžiru)',
-    labelCyr: 'Мали (покрива Амбасада Србије у Алжиру)',
-    embassy: 'Ambasada Srbije u Alžiru',
-    embassyCyr: 'Амбасада Србије у Алжиру',
-    email: 'ambasada@ambserbie-alger.com',
-  }, {
-    label: 'Malta (pokriva Ambasada Srbije u Italiji, Rim',
-    labelCyr: 'Малта (покрива Амбасада Србије у Италији, Рим',
-    embassy: 'Ambasada Srbije u Italiji, Rim',
-    embassyCyr: 'Амбасада Србије у Италији, Рим',
-    email: 'ljubomir.merdovic@mfa.rs',
-  }, {
-    label: 'Maroko',
-    labelCyr: 'Мароко',
-    embassy: 'Ambasada Srbije u Maroku',
-    embassyCyr: 'Амбасада Србије у Мароку',
-    email: 'ambrsrabat@gmail.com',
-  }, {
-    label: 'Mauricijus (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Маурицијус (покрива Амбасада Србије у Јужноафричкој Републици)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Mauritanija (pokriva Ambasada Srbije u Maroku)',
-    labelCyr: 'Мауританија (покрива Амбасада Србије у Мароку)',
-    embassy: 'Ambasada Srbije u Maroku',
-    embassyCyr: 'Амбасада Србије у Мароку',
-    email: 'ambrsrabat@gmail.com',
-  }, {
-    label: 'Meksiko',
-    labelCyr: 'Мексико',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Mjanmar',
-    labelCyr: 'Мјанмар',
-    embassy: 'Ambasada Srbije u Mjanmaru',
-    embassyCyr: 'Амбасада Србије у Мјанмару',
-    email: 'serbemb@yangon.net.mm',
-  }, {
-    label: 'Moldavija (pokriva Ambasada Srbije u Rumuniji)',
-    labelCyr: 'Молдавија (покрива Амбасада Србије у Румунији)',
-    embassy: 'Ambasada Srbije u Rumuniji, Bukurešt',
-    embassyCyr: 'Амбасада Србије у Румунији, Букурешт',
-    email: 'info@ambserbia.ro',
-  }, {
-    label: 'Monako (pokriva Ambasada Srbije u Francuskoj, Pariz)',
-    labelCyr: 'Монако (покрива Амбасада Србије у Француској, Париз)',
-    embassy: 'Ambasada Srbije u Francuskoj, Pariz',
-    embassyCyr: 'Амбасада Србије у Француској, Париз',
-    email: 'konzularno.pariz@mfa.rs',
-  }, {
-    label: 'Mongolija (pokriva Ambasada Srbije u Kini, Narodna Republika, Peking)',
-    labelCyr: 'Монголија (покрива Амбасада Србије у Кини, Народна Република, Пекинг)',
-    embassy: 'Ambasada Srbije u Kini, Narodna Republika, Peking',
-    embassyCyr: 'Амбасада Србије у Кини, Народна Република, Пекинг',
-    email: 'embserbia@embserbia.cn',
-  }, {
-    label: 'Mozambik (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Мозамбик (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Namibija (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Намибија (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Nemačka, Diseldorf (konzulat)',
-    labelCyr: 'Немачка, Диселдорф (конзулат)',
-    embassy: 'Konzulat Srbije u Nemačkoj, Diseldorf',
-    embassyCyr: 'Конзулат Србије у Немачкој, Диселдорф',
-    email: 'info@gksrbijedis.de',
-  }, {
-    label: 'Nemačka, Frankfurt (konzulat)',
-    labelCyr: 'Немачка, Франкфурт (конзулат)',
-    embassy: 'Konzulat Srbije u Nemačkoj, Frankfurt',
-    embassyCyr: 'Конзулат Србије у Немачкој, Франкфурт',
-    email: 'info@gksrbfra.de',
-  }, {
-    label: 'Nemačka, Hamburg (konzulat)',
-    labelCyr: 'Немачка, Хамбург (конзулат)',
-    embassy: 'Konzulat Srbije u Nemačkoj, Hamburg',
-    embassyCyr: 'Конзулат Србије у Немачкој, Хамбург',
-    email: 'gk_hamburg@web.de',
-  }, {
-    label: 'Nemačka, Minhen (konzulat)',
-    labelCyr: 'Немачка, Минхен (конзулат)',
-    embassy: 'Konzulat Srbije u Nemačkoj, Minhen',
-    embassyCyr: 'Конзулат Србије у Немачкој, Минхену',
-    email: 'gk.muenchen@mfa.rs',
-  }, {
-    label: 'Nemačka, Štutgart (konzulat)',
-    labelCyr: 'Немачка, Штутгарт (конзулат)',
-    embassy: 'Konzulat Srbije u Nemačkoj, Štutgart',
-    embassyCyr: 'Конзулат Србије у Немачкој, Стуттгарт',
-    email: 'gk-stutgart@t-online.de',
-  }, {
-    label: 'Nepal (pokriva Ambasada Srbije u Indiji)',
-    labelCyr: 'Непал (покрива Амбасада Србије у Индији)',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Niger (pokriva UN - Njujork)',
-    labelCyr: 'Нигер (покрива Мисија у УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Nigerija',
-    labelCyr: 'Нигерија',
-    embassy: 'Ambasada Srbije u Nigeriji',
-    embassyCyr: 'Амбасада Србије у Нигерији',
-    email: 'serbconsabuja@gmail.com',
-  }, {
-    label: 'Nikaragva (pokriva Ambasada Srbije u Meksiku)',
-    labelCyr: 'Никарагва (покрива Амбасада Србије у Мексику)',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Norveška',
-    labelCyr: 'Норвешка',
-    embassy: 'Ambasada Srbije u Norveškoj',
-    embassyCyr: 'Амбасада Србије у Норвешкој',
-    email: 'ambasada@serbianembassy.no',
-  }, {
-    label: 'Novi Zeland (pokriva Ambasada Srbije u Australiji, Kanbera)',
-    labelCyr: 'Нови Зеланд (покрива Амбасада Србије у Аустралији, Канбера)',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'Obala Slonovače (pokriva UN - Njujork)',
-    labelCyr: 'Обала Слоноваче (покрива УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Oman (pokriva Ambasada Srbije u Egiptu)',
-    labelCyr: 'Оман (покрива Амбасада Србије у Египту)',
-    embassy: 'Ambasada Srbije u Egiptu',
-    embassyCyr: 'Амбасада Србије у Египту',
-    email: 'konzul@serbiaeg.com',
-  }, {
-    label: 'Pakistan (pokriva Ambasada Srbije u Iranu)',
-    labelCyr: 'Пакистан (покрива Амбасада Србије у Ирану)',
-    embassy: 'Ambasada Srbije u Iranu',
-    embassyCyr: 'Амбасада Србије у Ирану',
-    email: 'serbembteh@neda.net',
-  }, {
-    label: 'Palestina (pokriva Ambasada Srbije u Egiptu)',
-    labelCyr: 'Палестина (покрива Амбасада Србије у Египту)',
-    embassy: 'Ambasada Srbije u Egiptu',
-    embassyCyr: 'Амбасада Србије у Египту',
-    email: 'konzul@serbiaeg.com',
-  }, {
-    label: 'Panama (pokriva Ambasada Srbije u Meksiku)',
-    labelCyr: 'Панама (покрива амбасада Србије у Мексику)',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Papua Nova Gvineja (pokriva Ambasada Srbije u Australiji, Kanbera)',
-    labelCyr: 'Папуа Нова Гвинеја (покрива Амбасада Србије у Аустралији, Канбера)',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'Paragvaj (pokriva Ambasada Srbije u Argentini)',
-    labelCyr: 'Парагвај (покрива Амбасада Србије у Аргентини)',
-    embassy: 'Ambasada Srbije u Argentini',
-    embassyCyr: 'Амбасада Србије у Аргентини',
-    email: 'consulado@serbembaires.com.ar',
-  }, {
-    label: 'Peru (pokriva Ambasada Srbije u Argentini)',
-    labelCyr: 'Перу (покрива Амбасада Србије у Аргентини)',
-    embassy: 'Ambasada Srbije u Argentini',
-    embassyCyr: 'Амбасада Србије у Аргентини',
-    email: 'consulado@serbembaires.com.ar',
-  }, {
-    label: 'Poljska',
-    labelCyr: 'Пољска',
-    embassy: 'Ambasada Srbije u Poljskoj',
-    embassyCyr: 'Амбасада Србије у Пољској',
-    email: 'embassy.warsaw@mfa.rs',
-  }, {
-    label: 'Portugal',
-    labelCyr: 'Португалија',
-    embassy: 'Ambasada Srbije u Portugalu',
-    embassyCyr: 'Амбасада Србије у Португалу',
-    email: 'serviaemba@netcabo.pt',
-  }, {
-    label: 'Ruanda (pokriva Ambasada Srbije u Keniji)',
-    labelCyr: 'Руанда (покрива Амбасада Србије у Кенији)',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Rumunija',
-    labelCyr: 'Румунија',
-    embassy: 'Ambasada Srbije u Rumuniji, Bukurešt',
-    embassyCyr: 'Амбасада Србије у Румунији, Букурешт',
-    email: 'info@ambserbia.ro',
-  }, {
-    label: 'Rumunija, Temišvar (konzulat)',
-    labelCyr: 'Румунија, Теишвар (конзулат)',
-    embassy: 'Konzulat Srbije u Rumuniji, Temišvar',
-    embassyCyr: 'Конзулат Србије у Румунији, Темишвар',
-    email: 'gktemisvar@gmail.com',
-  }, {
-    label: 'Rusija',
-    labelCyr: 'Русија',
-    embassy: 'Ambasada Srbije u Rusiji',
-    embassyCyr: 'Амбасада Србије у Русији',
-    email: 'konzularno.moskva@mfa.rs',
-  }, {
-    label: 'SAD, Čikago (konzulat)',
-    labelCyr: 'САД, Чикаго (конзулат)',
-    embassy: 'Konzulat Srbije u Sjedinjenim Američkim Državama, Čikago',
-    embassyCyr: 'Конзулат Србије у Сједињеним Америчким Државама, Цхицаго',
-    email: 'info@scgchicago.org',
-  }, {
-    label: 'SAD, Njujork (konzulat)',
-    labelCyr: 'САД, Њујорк (конзулат)',
-    embassy: 'Konzulat Srbije u Sjedinjenim Američkim Državama, Njujork',
-    embassyCyr: 'Конзулат Србије у Сједињеним Америчким Државама, Нев Иорк',
-    email: 'izbori.njujork2020@mfa.rs',
-  }, {
-    label: 'SAD, Vašington',
-    labelCyr: 'САД, Вашингтон',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Salvador (pokriva Ambasada Srbije u Meksiku)',
-    labelCyr: 'Салвадор (покрива Амбасада Србије у Мексику)',
-    embassy: 'Ambasada Srbije u Meksiku',
-    embassyCyr: 'Амбасада Србије у Мексику',
-    email: 'embajadaserbia@alestra.net.mx',
-  }, {
-    label: 'Samoa (pokriva Ambasada Srbije u Australiji, Kanbera)',
-    labelCyr: 'Самоа (покрива Амбасада Србије у Аустралији, Канбера)',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'San Marino (pokriva Ambasada Srbije u Italiji, Rim)',
-    labelCyr: 'Сан Марино (покрива Амбасада Србије у Италији, Рим)',
-    embassy: 'Ambasada Srbije u Italiji, Rim',
-    embassyCyr: 'Амбасада Србије у Италији, Рим',
-    email: 'ljubomir.merdovic@mfa.rs',
-  }, {
-    label: 'Sao Tome i Principe (pokriva UN - Njujork)',
-    labelCyr: 'Сао Томе и Принципе (покрива УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Saudijska Arabija',
-    labelCyr: 'Саудијска Арабија',
-    embassy: 'Ambasada Srbije u Saudijskoj Arabiji',
-    embassyCyr: 'Амбасада Србије у Саудијској Арабији',
-    email: 'embsrb.riyadh@yahoo.com',
-  }, {
-    label: 'Sejšeli (pokriva Ambasada Srbije u Etiopiji)',
-    labelCyr: 'Сејшели (покрива Амбасада Србије у Етиопији)',
-    embassy: 'Ambasada Srbije u Etiopiji',
-    embassyCyr: 'Амбасада Србије у Етиопији',
-    email: 'serbambadis@yahoo.com',
-  }, {
-    label: 'Senegal (pokriva Ambasada Srbije u Maroku)',
-    labelCyr: 'Сенегал (покрива Амбасада Србије у Мароку)',
-    embassy: 'Ambasada Srbije u Maroku',
-    embassyCyr: 'Амбасада Србије у Мароку',
-    email: 'ambrsrabat@gmail.com',
-  }, {
-    label: 'Sent Kits i Nevis (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Сент Китс и Невис (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Sent Vinsent i Grenadini (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Сент Винсент и Гренадини (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Severna Makedonija',
-    labelCyr: 'Северна Македонија',
-    embassy: 'Ambasada Srbije u Severnoj Makedoniji',
-    embassyCyr: 'Амбасада Србије у Северна Македонија',
-    email: 'srbamb@unet.com.mk',
-  }, {
-    label: 'Sijera Leone (pokriva UN - Njujork)',
-    labelCyr: 'Сијера Леоне (покрива УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Singapur (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Сингапур (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Sirija',
-    labelCyr: 'Сирија',
-    embassy: 'Ambasada Srbije u Siriji',
-    embassyCyr: 'Амбасада Србије у Сирији',
-    email: 'ambasada@srbija-damask.org',
-  }, {
-    label: 'Slovačka',
-    labelCyr: 'Словачка',
-    embassy: 'Ambasada Srbije u Slovačkoj',
-    embassyCyr: 'Амбасада Србије у Словачкој',
-    email: 'embassy.bratislava@mfa.rs',
-  }, {
-    label: 'Slovenija',
-    labelCyr: 'Словенија',
-    embassy: 'Ambasada Srbije u Sloveniji',
-    embassyCyr: 'Амбасада Србије у Словенији',
-    email: 'embassy.ljubljana@mfa.rs',
-  }, {
-    label: 'Somalija (pokriva Ambasada Srbije u Keniji)',
-    labelCyr: 'Сомалија (покрива Амбасада Србије у Кенији)',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Španija',
-    labelCyr: 'Шпанија',
-    embassy: 'Ambasada Srbije u Španiji',
-    embassyCyr: 'Амбасада Србије у Шпанији',
-    email: 'konz.madrid@mfa.rs',
-  }, {
-    label: 'Šri Lanka (pokriva Ambasada Srbije u Indiji)',
-    labelCyr: 'Шри Ланка (покрива Амбасада Србије у Индији)',
-    embassy: 'Ambasada Srbije u Indiji',
-    embassyCyr: 'Амбасада Србије у Индији',
-    email: 'embassyofserbiadelhi@hotmail.com',
-  }, {
-    label: 'Sudan (pokriva Ambasada Srbije u Egiptu)',
-    labelCyr: 'Судан (покрива Амбасада Србије у Египту)',
-    embassy: 'Ambasada Srbije u Egiptu',
-    embassyCyr: 'Амбасада Србије у Египту',
-    email: 'konzul@serbiaeg.com',
-  }, {
-    label: 'Surinam (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Суринам (покрива Амбасада Србије у САД, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Švajcarska, Cirih (konzulat)',
-    labelCyr: 'Швајцарска, Зурицх (конзулат)',
-    embassy: 'Konzulat Srbije u Švajcarskoj, Cirih',
-    embassyCyr: 'Конзулат Србије у Швајцарској, Цириху',
-    email: 'info@konzulat.ch',
-  }, {
-    label: 'Svazilend (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Свазиленд (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Švedska',
-    labelCyr: 'Шведска',
-    embassy: 'Ambasada Srbije u Švedskoj',
-    embassyCyr: 'Амбасада Србије у Шведској',
-    email: 'serbiaemb@telia.com',
-  }, {
-    label: 'Sveta Lucija (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Света Луција (покрива Амбасада Србије у Сједињеним Америчким Државама, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Tadžikistan (pokriva Ambasada Srbije u Etiopiji)',
-    labelCyr: 'Таџикистан (покрива Амбасада Србије у Етиопији)',
-    embassy: 'Ambasada Srbije u Etiopiji',
-    embassyCyr: 'Амбасада Србије у Етиопији',
-    email: 'serbambadis@yahoo.com',
-  }, {
-    label: 'Tajland (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Тајланд (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Tanzanija (pokriva Ambasada Srbije u Etiopiji)',
-    labelCyr: 'Танзанија (покрива Амбасада Србије у Етиопији)',
-    embassy: 'Ambasada Srbije u Etiopiji',
-    embassyCyr: 'Амбасада Србије у Етиопији',
-    email: 'serbambadis@yahoo.com',
-  }, {
-    label: 'Togo (pokriva UN - Njujork)',
-    labelCyr: 'Того (покрива Мисија у УН - Њујорк)',
-    embassy: 'UN - Njujork',
-    embassyCyr: 'УН - Њујорк',
-    email: 'info@serbiamissionun.org',
-  }, {
-    label: 'Tonga (pokriva Ambasada Srbije u Australiji, Kanbera)',
-    labelCyr: 'Тонга (покрива Амбасада Србије у Аустралији, Канбера)',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'Trinidad i Tobago (pokriva Ambasada Srbije u SAD, Vašington)',
-    labelCyr: 'Тринидад и Тобаго (покрива Амбасада Србије у Сједињеним Америчким Државама, Вашингтон)',
-    embassy: 'Ambasada Srbije u Sjedinjenim Američkim Državama, Vašington',
-    embassyCyr: 'Амбасада Србије у Сједињеним Америчким Државама, Васхингтон',
-    email: 'consular@serbiaembusa.org',
-  }, {
-    label: 'Tunis',
-    labelCyr: 'Тунис',
-    embassy: 'Ambasada Srbije u Tunisu',
-    embassyCyr: 'Амбасада Србије у Тунису',
-    email: 'amb.serbia@gnet.tn',
-  }, {
-    label: 'Turkmenistan (pokriva Ambasada Srbije u Rusiji)',
-    labelCyr: 'Туркменистан (покрива Амбасада Србије у Русији)',
-    embassy: 'Ambasada Srbije u Rusiji',
-    embassyCyr: 'Амбасада Србије у Русији',
-    email: 'konzularno.moskva@mfa.rs',
-  }, {
-    label: 'Turska, Ankara',
-    labelCyr: 'Турска, Анкари',
-    embassy: 'Ambasada Srbije u Turskoj, Ankara',
-    embassyCyr: 'Амбасада Србије у Турској, Анкара',
-    email: 'embserank@gmail.com',
-  }, {
-    label: 'Turska, Istanbul (konzulat)',
-    labelCyr: 'Турска, Истанбул (конзулат)',
-    embassy: 'Konzulat Srbije u Turskoj, Istanbul',
-    embassyCyr: 'Конзулат Србије у Турској, Истанбул',
-    email: 'konzulat.istanbul@mfa.rs',
-  }, {
-    label: 'Uganda (pokriva Ambasada Srbije u Keniji)',
-    labelCyr: 'Уганда (покрива Амбасада Србије у Кенији)',
-    embassy: 'Ambasada Srbije u Keniji',
-    embassyCyr: 'Амбасада Србије у Кенији',
-    email: 'nairobi@embassyofserbia.or.ke',
-  }, {
-    label: 'Ujedinjeni Arapski Emirati',
-    labelCyr: 'Уједињени Арапски Емирати',
-    embassy: 'Ambasada Srbije u Ujedinjenim Arapskim Emiratima',
-    embassyCyr: 'Амбасада Србије у Уједињеним Арапским Емиратима',
-    email: 'embassy.abudhabi@mfa.rs',
-  }, {
-    label: 'Ukrajina',
-    labelCyr: 'Украјина',
-    embassy: 'Ambasada Srbije u Ukrajini',
-    embassyCyr: 'Амбасада Србије у Украјини',
-    email: 'konzrs@ukr.net',
-  }, {
-    label: 'Urugvaj (pokriva Ambasada Srbije u Argentini)',
-    labelCyr: 'Уругвај (покрива Амбасада Србије у Аргентини)',
-    embassy: 'Ambasada Srbije u Argentini',
-    embassyCyr: 'Амбасада Србије у Аргентини',
-    email: 'consulado@serbembaires.com.ar',
-  }, {
-    label: 'Uzbekistan (pokriva Ambasada Srbije u Rusiji)',
-    labelCyr: 'Узбекистан (покрива Амбасада Србије у Русији)',
-    embassy: 'Ambasada Srbije u Rusiji',
-    embassyCyr: 'Амбасада Србије у Русији',
-    email: 'konzularno.moskva@mfa.rs',
-  }, {
-    label: 'Vanuatu (pokriva Ambasada Srbije u Australiji, Kanbera',
-    labelCyr: 'Вануату (покрива Амбасада Србије у Аустралији, Канбера',
-    embassy: 'Ambasada Srbije u Australiji, Kanbera',
-    embassyCyr: 'Амбасада Србије у Аустралији, Канбера',
-    email: 'embassy.canberra@serbia.org.au',
-  }, {
-    label: 'Vatikan',
-    labelCyr: 'Ватикан',
-    embassy: 'Ambasada Srbije u Vatikanu',
-    embassyCyr: 'Амбасада Србије у Ватикану',
-    email: 'amb.serbia.vatican@ambroma.com',
-  }, {
-    label: 'Velika Britanija',
-    labelCyr: 'Велика Британија',
-    embassy: 'Ambasada Srbije u Velikoj Britaniji',
-    embassyCyr: 'Амбасада Србије у Великој Британији',
-    email: 'izbori2020@serbianembassy.org.uk',
-  }, {
-    label: 'Venecuela (pokriva Ambasada Srbije na Kubi)',
-    labelCyr: 'Венецуела (покрива Амбасада Србије на Куби)',
-    embassy: 'Ambasada Srbije na Kubi',
-    embassyCyr: 'Амбасада Србије на Куби',
-    email: 'konzsrbhav@gmail.com',
-  }, {
-    label: 'Vijetnam (pokriva Ambasada Srbije u Indoneziji)',
-    labelCyr: 'Вијетнам (покрива Амбасада Србије у Индонезији)',
-    embassy: 'Ambasada Srbije u Indoneziji',
-    embassyCyr: 'Амбасада Србије у Индонезији',
-    email: 'embjakarta@serbian-embassy.org',
-  }, {
-    label: 'Zambija',
-    labelCyr: 'Замбија',
-    embassy: 'Ambasada Srbije u Zambiji',
-    embassyCyr: 'Амбасада Србије у Замбији',
-    email: 'serbia.lusaka@iconnect.zm',
-  }, {
-    label: 'Zelenortska ostrva (pokriva Ambasada Srbije u Južnoafričkoj Republici)',
-    labelCyr: 'Зеленортска острва (покрива Амбасада Србије у Републици Јужној Африци)',
-    embassy: 'Ambasada Srbije u Južnoafričkoj Republici',
-    embassyCyr: 'Амбасада Србије у Јужној Африци',
-    email: 'info@srbembassy.org.za',
-  }, {
-    label: 'Zimbabve (pokriva Ambasada Srbije u Portugalu)',
-    labelCyr: 'Зимбабве (покрива Амбасада Србије у Португалу)',
-    embassy: 'Ambasada Srbije u Portugalu',
-    embassyCyr: 'Амбасада Србије у Португалу',
-    email: 'serviaemba@netcabo.pt',
-  }
-];

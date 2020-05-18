@@ -92,8 +92,8 @@ export class FormComponent {
     });
   }
 
-  getLocationLabel(location: PollingStation) {
-    return location.labelCyr;
+  getCountryLabel(country: VotingCountry) {
+    return country.labelCyr;
   }
 
   drawComplete() {
@@ -198,7 +198,9 @@ export class FormComponent {
     const izbornoMesto: PollingStation = this.foreignVotingInfoForm.get('izbornoMesto')!.value;
     const to = izbornoMesto.email;
     const subject = 'Registracija za glasanje iz inostranstva';
-    const body = 'Poštovani, \nPrilažem moje podatke za registraciju za glasanje iz inostranstva. \nSa poštovanjem';
+    const body = 'Poštovani, \nPrilažem formular i prvu stranu pasoša za registraciju za glasanje iz inostranstva.' +
+      ' \nSa' +
+      ' poštovanjem';
     window.open(`mailto:${to}?subject=${subject}&body=${body}`, "_blank");
   }
 
