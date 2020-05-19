@@ -18,11 +18,11 @@ interface CountdownInfo {
 })
 export class CountdownComponent {
 
-  readonly electionDate = new Date('June 21, 2020 12:00:00');
+  readonly dueDate = new Date('May 25, 2020 12:00:00');
   readonly countdown$ = interval(200).pipe(map(() => this.buildCountdownInfo()));
 
   private buildCountdownInfo(): CountdownInfo {
-    let diff = Math.floor(this.electionDate.getTime() - new Date().getTime()) / 1000;
+    let diff = Math.floor(this.dueDate.getTime() - new Date().getTime()) / 1000;
 
     const days = Math.floor(diff / (60 * 60 * 24));
     diff -= days * 60 * 60 * 24;
