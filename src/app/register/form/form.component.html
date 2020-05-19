@@ -84,6 +84,9 @@
           <mat-error *ngIf="personalInfoForm.get('jmbg').hasError('maxlength')">
             ЈМБГ садржи више од 13 цифара. Проверите вредност
           </mat-error>
+          <mat-error *ngIf="personalInfoForm.get('jmbg').hasError('invalidJmbg')">
+            ЈМБГ није исправан. Проверите вредност
+          </mat-error>
         </mat-form-field>
 
         <mat-form-field appearance="outline">

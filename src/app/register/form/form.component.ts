@@ -15,6 +15,7 @@ import {
   VotingCountry
 } from "./constants";
 import {map, startWith} from 'rxjs/operators';
+import {JmbgValidator} from "./validators";
 
 interface Gender {
   label: string;
@@ -54,6 +55,7 @@ export class FormComponent {
       Validators.pattern("^[0-9]*$"),
       Validators.minLength(13),
       Validators.maxLength(13),
+      JmbgValidator,
     ]),
     'adresaPrebivalista': this.fb.control('', [Validators.required]),
     'adresaPrebivalistaInternoRaseljeni': this.fb.control(''),
