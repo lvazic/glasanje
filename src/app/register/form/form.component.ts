@@ -220,9 +220,10 @@ export class FormComponent {
     const izbornoMesto: PollingStation = this.foreignVotingInfoForm.get('izbornoMesto')!.value;
     const to = izbornoMesto.email;
     const subject = 'Registracija za glasanje iz inostranstva';
-    const body = `Poštovani, %0D%0APrilažem formular i prvu stranu pasoša za registraciju za glasanje iz inostranstva.` +
-      ` %0D%0ASa` +
-      ` poštovanjem`;
+    const body = `Poštovani/na,` + 
+      ` %0D%0A Prilažem formular i prvu stranu pasoša za registraciju za glasanje iz inostranstva.` +
+      ` %0D%0A Sa poštovanjem,`;
+    
     window.open(`mailto:${to}?subject=${subject}&body=${body}`, "_blank");
   }
 
