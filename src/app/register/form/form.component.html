@@ -18,7 +18,7 @@
       <form [formGroup]="personalInfoForm" class="register-form">
 
         <mat-form-field appearance="outline">
-          <mat-label>Име</mat-label>
+          <mat-label>Име и презиме</mat-label>
           <input formControlName="ime" matInput placeholder="Унесите Ваше име и презиме">
           <mat-hint>Унесите Ваше пуно име као што је у пасошу. На пример: Петар Петровић</mat-hint>
           <mat-error *ngIf="personalInfoForm.get('ime').hasError('required')">
